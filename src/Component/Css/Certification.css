@@ -1,0 +1,87 @@
+/* 
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        margin-left: 120px;
+      
+
+    } */
+    .bckgroundcertificate{
+        background-image:url("../../Assets/Image/Group\ 345.png");
+        height: 500px;
+        opacity: 1;
+    }
+    .content{
+        margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    }
+.tab1pargraph{
+    text-align: justify;
+font-family: "Poppins" ;
+font-size: 17px;
+
+
+color: #707070;
+
+}
+.headingpragraph{
+    text-align: left;
+font-family: "Poppins" ;
+font-weight: 600;
+font-size: 19px;
+color: #707070;
+
+}
+
+    .nav-tabs .nav-link {
+        border: solid transparent;
+        border-width: 0 0 1px;
+        border-radius: 0;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: bold;
+        font-size: 16px;
+       
+        padding: 17px 0px 10px 10px;
+        margin-left: 120px;
+        text-align: left;
+        font-family: "Poppins" ;
+    
+        color: #707070;
+      
+    }
+   .enquirybutton{
+
+text-transform: none;
+width: 200px;
+height: 40px;
+/* UI Properties */
+background: #00BEFF 0% 0% no-repeat padding-box;
+border-radius: 9px;
+opacity: 1;
+color: white;
+font-family: "Poppins" ;
+font-size: 20px;
+letter-spacing: 0px;
+color: #FFFFFF;
+margin-left: 80px;
+border: none;
+   }
+  .training{
+    font-family:" normal normal bold 36px/87px Poppins";
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+  }
+  .trainingcalender{
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  .trainingcard{
+    background-color: #1F5B70;
+  }
