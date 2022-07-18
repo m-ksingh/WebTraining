@@ -1,0 +1,85 @@
+.TrainingBanner {
+    background-image: url("../../Assets/Image/TrainingBanner.png");
+    height: 650px;
+  
+  
+  }
+  .btntraining{
+    background-color: #1A576A;
+    border: 1px #1A576A;
+    color: white;
+    padding: 2px auto;
+  }
+  .btntraining:hover{
+    color: aliceblue;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: 20px 10px 20px 55px;
+    height: auto; 
+
+  }
+  .row{
+    border-radius: 10px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .tabss{
+    margin-left: 105px !important;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .tabss {
+      margin-left: 0px !important;
+    }
+    .nav-tabs .nav-link {
+      border: solid transparent;
+      border-width: 0 0 1px;
+      border-radius: 0;
+      text-transform: uppercase;
+      line-height: 1;
+      font-weight: bold;
+      font-size: 16px;
+     
+      padding: 17px 0px 10px 10px;
+      margin-left: 50px;
+  
+      font-family: "Poppins" ;
+  
+      color: #707070;
+    
+  }
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: white;
+    border-color: #1266f1;
+    background:#1A576A;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+  
+ 
+  }
+  .abc{
+    border-right: 1px solid red;
+  }
+  .responsivesearch{
+    margin-left: 500px;
+    margin-bottom: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    .responsivesearch {
+      margin-left: 0px !important;
+      margin-bottom: 0px !important;
+    }
+  }

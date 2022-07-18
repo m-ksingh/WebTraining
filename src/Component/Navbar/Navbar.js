@@ -5,7 +5,8 @@ import alchemylogo from "../../Assets/Image/Alchemy Solutions - Logo.png";
 
 function Navbar() {
   return (
-    <div><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <button class="navbar-toggler" style={{color:"#707070", backgroundColor:"#E7EEF0"}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,12 +35,15 @@ function Navbar() {
         
         </ul>
         
-    
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
+    <Link to ="">
+      <button class="btn  my-2 my-sm-0">Contact Us</button>
+      </Link>
 
       </div>
     </div>
-  </nav></div>
+  </nav>
+ 
+  </div>
   )
 }
 

@@ -74,7 +74,7 @@ function Home() {
   
 </div>
 
-<h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | Cloud Computing | AI/ML</h6>
+<h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
 {suggestions && suggestions.map((suggestion,i)=>
     <div key={i} >{suggestion.first_name}</div>
   )}
@@ -130,31 +130,32 @@ function Home() {
 
 <div class="slider">
 	<div class="slide-track">
-		<div class="slide">
-			<img src={emc} height="100" width="250" alt="" />
+  <div class="slide">
+			<img src={info} height="60" width="280" alt="" />
 		</div>
 		<div class="slide">
-			<img src={anz} height="100" width="250" alt="" />
+			<img src={tesco} height="70" width="280" alt="" />
 		</div>
 		<div class="slide">
-			<img src={abb} height="100" width="250" alt="" />
+			<img src={emc} height="70" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src={anz} height="70" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src={abb} height="70" width="250" alt="" />
 		</div>
     <div class="slide">
-			<img src={mindtree} height="100" width="250" alt="" />
+			<img src={mindtree} height="90" width="250" alt="" />
 		</div>
-    <div class="slide">
-			<img src={info} height="100" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src={tesco} height="100" width="250" alt="" />
-		</div>
+    
 	
 	
 		<div class="slide">
-			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/LT.jpg" height="100" width="250" alt="" />
+			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/LT.jpg" height="70" width="250" alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Vodafone.jpg" height="100" width="250" alt="" />
+			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Vodafone.jpg" height="70" width="250" alt="" />
 		</div>
 		<div class="slide">
 			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Siemens.jpg" height="100" width="250" alt="" />
@@ -163,7 +164,7 @@ function Home() {
 			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Cognizant.jpg" height="100" width="250" alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Accenture.jpg" height="100" width="250" alt="" />
+			<img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Accenture.jpg" height="80" width="250" alt="" />
 		</div>
 		
 	</div>
@@ -217,6 +218,53 @@ function Home() {
 </div>
 </div>
 </div>
+
+{/* contact us */}
+
+
+<div className='contactusmain' >
+<form action="#" method="post" className='contactus'>
+  <h1 class="text-white text-center">Contact Us</h1>
+  <p className='text-center'>Please take a moment to get in touch, we will get back to you shortly.</p>
+
+  <div class="column">
+    <label for="the-name">Your Name</label>
+    <input type="text" name="name" id="the-name" required/>
+
+    <label for="the-email">Email Address</label>
+    <input type="email" name="email" id="the-email" required/>
+
+    <label for="the-phone">Phone Number</label>
+    <input type="text" pattern="[6789][0-9]{9}" title="Please enter valid phone number" name="phone" id="the-phone"   required />
+
+    {/* <label for="the-reason">How can we help you?</label>
+    <select name="reason" id="the-reason">
+    <option value="">Choose one</option>
+    <option value="web">I need web design services</option>
+    <option value="video">I need you to produce a video</option>
+    <option value="3d">I need 3D polygon things</option>
+  </select> */}
+  </div>
+  <div class="column">
+    <label for="the-message">Message</label>
+    <textarea name="message" id="the-message" required></textarea>
+    {/* <label>
+    <input type="checkbox" name="newsletter" value="yes"/> Join our mailing list?
+    </label> */}
+    <input type="submit" value="Send Message"/>
+  </div>
+</form>
+</div>
+
+{/* last  */}
+
+
+{/* <div
+  class=" footer bg-image d-flex justify-content-center align-items-center"
+ 
+>
+  <h1 class="text-white">We Make IT Training Work !!</h1>
+</div> */}
 
   </>
   )
