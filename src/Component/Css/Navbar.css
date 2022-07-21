@@ -29,6 +29,9 @@
 
     text-decoration-color: red!important;
 }
+.nav-item :active{
+color: yellow;
+}
 .btn {
    
     vertical-align: bottom;

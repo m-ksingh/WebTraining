@@ -11,7 +11,7 @@
     } */
     .bckgroundcertificate{
         background-image:url("../../Assets/Image/Group\ 345.png");
-        height: 500px;
+        height: 450px;
         opacity: 1;
     }
     .content{
@@ -85,3 +85,45 @@ opacity: 1;
   .trainingcard{
     background-color: #1F5B70;
   }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #E7EEF0;
+    border-radius: 1rem;
+    outline: 0;
+    background: #E7EEF0;
+  }
+  .cname{
+    font-family: 'poppins';
+  }
+  @media screen and (max-width: 600px) {
+    .card {
+     width: 18rem !important;
+     margin: 0px -50px;
+
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .bckgroundcertificate{
+      height: 850px ;
+     
+    }
+    .enquirybutton{
+      margin-left: 0px;
+     
+    }
+    .text-white{
+      text-align: justify;
+    }
+  }
+  @media screen and (max-width: 600px){
+  .imgbanner{
+display: none;
+  }
+}
