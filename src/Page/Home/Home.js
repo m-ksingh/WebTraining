@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, {  useState, useEffect } from 'react';
 import "../../Component/Css/Home.css";
 import axios from "axios";
 import emc from "../../Assets/Image/emc (2).png";
@@ -24,22 +24,35 @@ import Scrollindicator from '../../Component/Scrollindicator/Scrollindicator';
 function Home() {
   const [courseList, setCourseList] = useState([]);
   const [courseName, setCourseName] = useState('');
-  const [status, setStatus] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
 
-  const Submit = () => {
-
-    axios.get(DevelopmentUrl + `/courses/searchbytitle/${courseName}`)
+  useEffect(() => {
+    axios.get(DevelopmentUrl + '/courses')
       .then(res => {
-        console.log(res.data);
         setCourseList(res.data);
-        setStatus(true);
-        setCourseName('')
+        console.log(res.data);
+       
+        setCourseName('');
       })
       .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
 
+  }, [])
+
+  const onChangeHandler = (courseName) => {
+
+    let filterCourseByName =[]
+       if(courseName.length > 0) {
+        filterCourseByName = courseList.filter(list =>{
+            const regex = new RegExp(`${courseName}`,"gi");
+            return list.title.match(regex)
+        })
+       }
+       console.log(filterCourseByName)
+        setSuggestions(filterCourseByName)
+        setCourseName(courseName)
+    
   }
 
-  // console.log(courseName);
   return (
     <>
 
@@ -55,21 +68,21 @@ function Home() {
               <div class="search">
 
                 <input type="text" class="form-control" placeholder="Search From 500 + Courses"
-                  onChange={e => setCourseName(e.target.value)}
+                  onChange={e => onChangeHandler(e.target.value)}
                   value={courseName}
                 />
 
-                <button class="btn btn-primary" onClick={Submit}>  <i class="fa fa-search"></i></button>
+                <button class="btn btn-primary">  <i class="fa fa-search"></i></button>
 
               </div>
 
               <h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
-              {courseList.length > 0 ? courseList.map((suggestion, i) =>
+              {suggestions &&  suggestions.map((suggestion, i) =>
                 <div key={i} >
                   <Link to='/Courses'
                     state={{ from: suggestion }}>{suggestion.title}</Link>
                 </div>
-              ) : status === true ? <p>No Courses Found</p> : ''}
+              )}
 
               {/* <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a  {suggestion.title}

@@ -15,7 +15,7 @@ function Certification() {
   const [trainingfor3, setTrainingfor3] = useState(false);
   const [message, setMessage] = useState('');
   const [modalMessage, setModalMessage] = useState("");
-  const trainingfor = [];
+
   const trainingHandler1 = (e) => {
 
     if(trainingfor1 !== false){
@@ -43,15 +43,16 @@ function Certification() {
   const EnquiryForm = async (e) => {
 
     e.preventDefault();
-    trainingfor.push(trainingfor1);
-    trainingfor.push(trainingfor2);
-    trainingfor.push(trainingfor3);
  
     const form = {
       fullname: fullname,
       email: email,
       phone: phone,
-      trainingfor: trainingfor,
+      trainingfor: {
+        individual: trainingfor1,
+        group: trainingfor2,
+        corporate: trainingfor3
+      },
       message: message
     }
 
