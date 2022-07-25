@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from "axios";
+import ReactMarkdown from 'react-markdown'
+import DevelopmentUrl from "../../data/api";
+import { useLocation } from "react-router-dom";
 import "../../Component/Css/Home.css"
 import "../../Component/Css/Certification.css"
-import certimg from "../../Assets/Image/cert.png"
-import DevelopmentUrl from "../../data/api";
 
-function Certification() {
+function Course() {
+  const location = useLocation();
+  const { from } = location.state;
 
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
@@ -16,6 +19,7 @@ function Certification() {
   const [message, setMessage] = useState('');
   const [modalMessage, setModalMessage] = useState("");
   const trainingfor = [];
+
   const trainingHandler1 = (e) => {
 
     if(trainingfor1 !== false){
@@ -74,44 +78,46 @@ function Certification() {
 
   }
 
+
+  const bckgroundcertificate = {
+    backgroundImage: `url(${DevelopmentUrl}${from.bgImage.url})`,
+    height: "500px",
+    opacity: 1
+  };
+
   return (
     <>
 
-      <div class="p-5  bg-image bckgroundcertificate">
+      <div class="p-5  bg-image" style={bckgroundcertificate}>
         <div class="mask" >
           <div class="container-fluid">
             <div class="row p-5">
               <div class="col-sm-4 p-5 ">
-                <img
-                  src={certimg}
-                  className="imgbanner"
-                  alt="course"
-                />
+                <img src={`${DevelopmentUrl}${from.certImage.url}`} alt="Hollywood Sign on The Hill" />
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
               <div class="col-sm-8 py-5 text-white ">
-                <h4 className='cname'>AWS Certification Training Course for Solutions Architect</h4>
-                <p className='pt-4 cname'>Our AWS training is the first AWS course certified by NASSCOM and it aligns with industry standards. This AWS Certification course includes SAA-C02 & C01 to help you clear AWS Solutions Architect Certification exam. Learn AWS skills while working on multiple case studies, projects, and master building highly scalable, and fault-tolerant applications.
-                </p>
-                <hr />
+                <h4 className='cname'>{from.title}</h4>
+                <p className='pt-4 cname'>{from.description}</p>
+                <hr/>
                 <div className='row'>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/3392/premium/3392394.png?token=exp=1658310191~hmac=d2b2ec422f85f7a98d973ba9d8587512' height="30px" />
-                    <p className=' px-3'>36 Hrs Instructor-Led Training </p>
+                  <img src='https://cdn-icons.flaticon.com/png/128/3392/premium/3392394.png?token=exp=1658310191~hmac=d2b2ec422f85f7a98d973ba9d8587512' height="30px"/>
+                  <p className=' px-3'>36 Hrs Instructor-Led Training </p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/591/premium/591576.png?token=exp=1658310050~hmac=5e5f970abdbad1acf9f31ea9b5849044' height="30px" />
-                    <p className=' px-3'>Flexible Schedule</p>
+                  <img src='https://cdn-icons.flaticon.com/png/128/591/premium/591576.png?token=exp=1658310050~hmac=5e5f970abdbad1acf9f31ea9b5849044' height="30px"/>
+                  <p className=' px-3'>Flexible Schedule</p>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-sm-6 d-flex '>
-                    <img src='https://cdn-icons.flaticon.com/png/128/749/premium/749085.png?token=exp=1658308807~hmac=1ac82058417768b807ed7c41a28f50d0' height="30px" />
-                    <p className=' px-3'>Lifetime access</p>
+                  <img src='https://cdn-icons.flaticon.com/png/128/749/premium/749085.png?token=exp=1658308807~hmac=1ac82058417768b807ed7c41a28f50d0' height="30px"/>
+                  <p className=' px-3'>Lifetime access</p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons-png.flaticon.com/128/5427/5427040.png' height="30px" />
-                    <p className='px-3'>Project & Exercises</p>
+                  <img src='https://cdn-icons-png.flaticon.com/128/5427/5427040.png' height="30px"/>
+                  <p className='px-3'>Project & Exercises</p>
                   </div>
                 </div>
 
@@ -148,9 +154,11 @@ function Certification() {
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
           <div >
+          <ReactMarkdown>
+           {from.overview}
+            </ReactMarkdown> 
 
-
-            <p className='tab1pargraph' >In this comprehensive AWS certification course led by industry experts, you will learn skills such as AWS Elastic Cloud Compute, Simple Storage Service, VPC, Aurora database service, Load Balancing, Auto Scaling, AWS S3, etc. This AWS training will also prepare you for the AWS Solutions Architect certification exam.</p>
+            {/* <p className='tab1pargraph' >In this comprehensive AWS certification course led by industry experts, you will learn skills such as AWS Elastic Cloud Compute, Simple Storage Service, VPC, Aurora database service, Load Balancing, Auto Scaling, AWS S3, etc. This AWS training will also prepare you for the AWS Solutions Architect certification exam.</p>
 
             <h6 className='headingpragraph'>What will you learn in the online AWS training?</h6>
             <p className='tab1pargraph'>The following are the learning outcomes of this AWS Solutions Architect Associate course:</p>
@@ -189,7 +197,7 @@ function Certification() {
               - AWS Certified DevOps Engineer <br />
               - Cloud DevOps Architect  <br />
               - AWS Developer <br />
-              - AWS Systems Administrator</p>
+              - AWS Systems Administrator</p> */}
 
           </div>
 
@@ -201,7 +209,11 @@ function Certification() {
 
 
         <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="profile-tab">
-          <h6 className='headingpragraph'>Module 01 - Introduction to Cloud Computing & AWS</h6>
+        <ReactMarkdown >
+           {from.curriculum}
+          
+            </ReactMarkdown>
+          {/* <h6 className='headingpragraph'>Module 01 - Introduction to Cloud Computing & AWS</h6>
           <p className='tab1pargraph'>1.1 - What is Cloud Computing <br />
             1.2 - Cloud Service & Deployment Models<br />
 
@@ -283,12 +295,12 @@ function Certification() {
             4. Creating a complete VPC architecture.<br />
 
           </p>
-          <hr />
+          <hr /> */}
 
         </div>
         <div class="tab-pane fade" id="fee" role="tabpanel" aria-labelledby="contact-tab">
 
-          <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", boxShadow: "none", borderLeft: "2px solid #00BEFF" }}>
+          <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px" ,boxShadow:"none" , borderLeft:"2px solid #00BEFF" }}>
             {/* <div class="card-header">
     Featured
   </div> */}
@@ -306,10 +318,8 @@ function Certification() {
             </div>
 
           </div>
-          <div class="card mt-4" style={{
-            width: "80rem", background: "#E7EEF0", borderRadius: "15px",
-            borderLeft: "2px solid #00BEFF", boxShadow: "none"
-          }}>
+          <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px",
+           borderLeft:"2px solid #00BEFF", boxShadow:"none" }}>
             {/* <div class="card-header">
     Featured
   </div> */}
@@ -327,7 +337,7 @@ function Certification() {
             </div>
 
           </div>
-          <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", borderLeft: "2px solid #00BEFF", boxShadow: "none" }}>
+          <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px" , borderLeft:"2px solid #00BEFF", boxShadow:"none"}}>
             {/* <div class="card-header">
     Featured
   </div> */}
@@ -348,7 +358,11 @@ function Certification() {
         </div>
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
-          <h6 className='headingpragraph'>Why should I join this AWS Architect certification course at Alchemy?</h6>
+        <ReactMarkdown>
+           {from.faqs}
+          
+            </ReactMarkdown> 
+          {/* <h6 className='headingpragraph'>Why should I join this AWS Architect certification course at Alchemy?</h6>
           <p className='tab1pargraph'>Our AWS training gives you hands-on experience in working with the top-notch Amazon Web Services platform that is used by some of the biggest corporations in the world. You can master the concepts of AWS cloud infrastructure, and Software as a Service, and learn how to design, plan and scale the AWS platform as per the best practices. This entire course content is in line with the requirements for clearing the AWS Certification Solutions Architect exam. You will be working on real-time AWS projects and step-by-step assignments that have high relevance in the corporate world, and the curriculum is designed by industry experts. Upon the completion of the AWS Cloud certification course, you can apply for some of the best jobs in top MNCs around the world at top salaries. Alchemy offers lifetime access to videos, course materials, 24/7 support, and course material upgrading to the latest version at no extra fee. Hence, it is clearly a one-time investment.</p>
 
 
@@ -363,7 +377,7 @@ function Certification() {
 
 
           <h6 className='headingpragraph'>What are the various benefits of AWS certification for corporate and IT professionals?</h6>
-          <p className='tab1pargraph'>AWS certification is a globally recognized way for corporate and IT professionals to validate their technical skills. The certification proves that they have the skills and knowledge required to design, deploy, and operate the applications and infrastructure on AWS. Upskilling will increase employability and validate one’s expertise. Some employers only consider a candidate who has the relevant certifications. Certified individuals can also demand higher salaries. Certification enables IT professionals to explore different career paths. AWS-certified employees are able to troubleshoot problems, complete projects faster, and be more productive. Certified professionals also receive invitations to exclusive events and get access to the AWS-certified LinkedIn community and the AWS Certification lounges at AWS.</p>
+          <p className='tab1pargraph'>AWS certification is a globally recognized way for corporate and IT professionals to validate their technical skills. The certification proves that they have the skills and knowledge required to design, deploy, and operate the applications and infrastructure on AWS. Upskilling will increase employability and validate one’s expertise. Some employers only consider a candidate who has the relevant certifications. Certified individuals can also demand higher salaries. Certification enables IT professionals to explore different career paths. AWS-certified employees are able to troubleshoot problems, complete projects faster, and be more productive. Certified professionals also receive invitations to exclusive events and get access to the AWS-certified LinkedIn community and the AWS Certification lounges at AWS.</p> */}
 
         </div>
       </div>
@@ -387,15 +401,15 @@ function Certification() {
                 <div className='row'>
                   <div class="form-group col-sm-4 ">
                     <label for="recipient-name" class="col-form-label">Full Name:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={fullname} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setFullname(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" value={fullname} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setFullname(e.target.value)}/>
                   </div>
                   <div class="form-group col-sm-4">
                     <label for="recipient-name" class="col-form-label">Email:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={email} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setEmail(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" value={email} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setEmail(e.target.value)}/>
                   </div>
                   <div class="form-group col-sm-4">
                     <label for="recipient-name" class="col-form-label">Phone Number:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={phone} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setPhone(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" value={phone} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setPhone(e.target.value)}/>
                   </div>
                 </div>
 
@@ -429,6 +443,7 @@ function Certification() {
               </form>
             </div>
             <div class="modal-footer">
+              {/* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> */}
               <h6 class="modal-title " style={{ color: "#1266f1" }}>{modalMessage}</h6>
               <button type="button" class="btn " onClick={EnquiryForm} >Submit</button>
             </div>
@@ -443,4 +458,4 @@ function Certification() {
   )
 }
 
-export default Certification
+export default Course;
