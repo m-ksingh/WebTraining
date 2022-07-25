@@ -75,14 +75,16 @@ function Home() {
                 <button class="btn btn-primary">  <i class="fa fa-search"></i></button>
 
               </div>
-
-              <h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
+             
               {suggestions &&  suggestions.map((suggestion, i) =>
-                <div key={i} >
+                <div key={i} style={{background:"white",borderRadius:"30px", padding:"10px 5px 10px 25px  "}}>
                   <Link to='/Courses'
                     state={{ from: suggestion }}>{suggestion.title}</Link>
                 </div>
               )}
+             
+              <h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
+              
 
               {/* <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a  {suggestion.title}
@@ -228,7 +230,7 @@ function Home() {
 
 
       <div className='contactusmain' >
-        <form action="#" method="post" className='contactus'>
+        <form  className='contactus'>
           <h1 class="text-white text-center">Contact Us</h1>
           <p className='text-center'>Please take a moment to get in touch, we will get back to you shortly.</p>
 

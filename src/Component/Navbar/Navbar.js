@@ -13,7 +13,7 @@ function Navbar() {
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <Link class="navbar-brand" to="/">
-      <img src={alchemylogo} alt="Alchemy Solutions" height="50" class="d-inline-block align-text-top"/>
+      <img src={alchemylogo} alt="Alchemy Solutions" height="40" class="d-inline-block align-text-top"/>
  
     </Link>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -36,7 +36,7 @@ function Navbar() {
         </ul>
         
     <Link to ="">
-      <button class="btn  my-2 my-sm-0">Contact Us</button>
+      <button class="btn  my-2 my-sm-0" style={{boxShadow:"none"}}>Contact Us</button>
       </Link>
 
       </div>

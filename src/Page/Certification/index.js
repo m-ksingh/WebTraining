@@ -138,9 +138,9 @@ function Certification() {
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="profile" aria-selected="false">Curriculum</button>
         </li>
-        <li class="nav-item" role="presentation">
+        {/* <li class="nav-item" role="presentation">
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#fee" type="button" role="tab" aria-controls="profile" aria-selected="false">Fees</button>
-        </li>
+        </li> */}
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#FAQ" type="button" role="tab" aria-controls="contact" aria-selected="false">FAQs</button>
         </li>
@@ -289,10 +289,10 @@ function Certification() {
         </div>
         <div class="tab-pane fade" id="fee" role="tabpanel" aria-labelledby="contact-tab">
 
-          <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", boxShadow: "none", borderLeft: "2px solid #00BEFF" }}>
-            {/* <div class="card-header">
+          {/* <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", boxShadow: "none", borderLeft: "2px solid #00BEFF" }}>
+            <div class="card-header">
     Featured
-  </div> */}
+  </div>
             <div class="card-body">
               <div class="row">
                 <div className='col-sm-10'>
@@ -306,14 +306,14 @@ function Certification() {
               </div>
             </div>
 
-          </div>
-          <div class="card mt-4" style={{
+          </div> */}
+          {/* <div class="card mt-4" style={{
             width: "80rem", background: "#E7EEF0", borderRadius: "15px",
             borderLeft: "2px solid #00BEFF", boxShadow: "none"
           }}>
-            {/* <div class="card-header">
+            <div class="card-header">
     Featured
-  </div> */}
+  </div>
             <div class="card-body">
               <div class="row">
                 <div className='col-sm-10'>
@@ -327,11 +327,11 @@ function Certification() {
               </div>
             </div>
 
-          </div>
-          <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", borderLeft: "2px solid #00BEFF", boxShadow: "none" }}>
-            {/* <div class="card-header">
+          </div> */}
+          {/* <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", borderLeft: "2px solid #00BEFF", boxShadow: "none" }}>
+            <div class="card-header">
     Featured
-  </div> */}
+  </div>
             <div class="card-body">
               <div class="row">
                 <div className='col-sm-10'>
@@ -339,13 +339,13 @@ function Certification() {
                   <p class="card-text">- Customized Learning  <br /> - Enterprise grade Learning Management System (LMS)  <br /> -Enterprise grade Reporting</p>
                 </div>
                 <div className='col-sm-2' >
-                  {/* <h5 class="card-title">INR 13,000</h5> */}
+                  <h5 class="card-title">INR 13,000</h5>
                   <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
                 </div>
               </div>
             </div>
 
-          </div>
+          </div> */}
         </div>
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
