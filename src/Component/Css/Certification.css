@@ -108,6 +108,12 @@ opacity: 1;
      margin: 0px -50px;
 
     }
+    .content {
+      margin-left: 70px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: 50px;
+  }
   }
   @media screen and (max-width: 600px) {
     .bckgroundcertificate{

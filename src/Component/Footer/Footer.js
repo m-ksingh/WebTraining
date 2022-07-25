@@ -6,7 +6,7 @@ function Footers() {
   return (
     <div>
 
-<footer class="text-center text-lg-start bg-color text-muted">
+<footer class="text-center text-lg-start bg-color text-muted pb-5 ">
 
   <section
     class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -100,7 +100,7 @@ function Footers() {
             training@alchemysolutions.net
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          {/* <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p> */}
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
   
       </div>
