@@ -4,6 +4,7 @@ import "../../Component/Css/Home.css"
 import "../../Component/Css/Certification.css"
 import certimg from "../../Assets/Image/cert.png"
 import DevelopmentUrl from "../../data/api";
+import LoadingSpinner from "../../Component/LoadingSpinner/LoadingSpinner";
 
 function Certification() {
 
@@ -15,63 +16,158 @@ function Certification() {
   const [trainingfor3, setTrainingfor3] = useState(false);
   const [message, setMessage] = useState('');
   const [modalMessage, setModalMessage] = useState("");
+  const [err, setErr] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
+  const validate = (name, value) => {
+    const phone = /^[0-9]{10}$/;
+    const fullname = /^[a-zA-Z\s]*$/;
+    const email = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    switch (name) {
+      case "fullname":
+        if (!value || value.trim() === "") {
+          setErr({ fullname: "Full Name is required" });
+        } else if (!fullname.test(value)) {
+          setErr({ fullname: "Only letters allowed" });
+        } else {
+          setErr("");
+        }
+        break;
+      case "email":
+        if (!value || value.trim() === "") {
+          setErr({ email: "Email is required" });
+        } else if (!email.test(value)) {
+          setErr({ email: "Enter valid email" });
+        } else {
+          setErr("");
+        }
+        break;
+      case "phone":
+        if (!value || value.trim() === "") {
+          setErr({ phone: "Phone Number is required" });
+        } else if (!phone.test(value)) {
+          setErr({ phone: "Enter valid phone number" });
+        } else {
+          setErr("");
+        }
+        break;
+      case "message":
+        if (!value || value.trim() === "") {
+          setErr({ message: "Message is required" });
+        } else {
+          setErr("");
+        }
+        break;
+      default: {
+        return "";
+      }
+    }
+  };
+
+  const fullnameHandle = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const validateResult = validate(name, value);
+    if (!validateResult) {
+      setFullname(value);
+    }
+    setFullname(value);
+  }
+  const emailHandle = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const validateResult = validate(name, value);
+    if (!validateResult) {
+      setEmail(value);
+    }
+  }
+  const phonenoHandle = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const validateResult = validate(name, value);
+    if (!validateResult) {
+      setPhone(value);
+    }
+  }
   const trainingHandler1 = (e) => {
 
-    if(trainingfor1 !== false){
+    if (trainingfor1 !== false) {
       setTrainingfor1(false)
-    }else{
+    } else {
       setTrainingfor1(e.target.name);
     }
-    
+
   }
   const trainingHandler2 = (e) => {
-    if(trainingfor2 !== false){
+    if (trainingfor2 !== false) {
       setTrainingfor2(false)
-    }else{
+    } else {
       setTrainingfor2(e.target.name);
     }
   }
   const trainingHandler3 = (e) => {
-    if(trainingfor3 !== false){
+    if (trainingfor3 !== false) {
       setTrainingfor3(false)
-    }else{
+    } else {
       setTrainingfor3(e.target.name);
     }
   }
 
+  const messageHandle = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    const validateResult = validate(name, value);
+    if (!validateResult) {
+      setMessage(value);
+    }
+  }
   const EnquiryForm = async (e) => {
 
     e.preventDefault();
- 
-    const form = {
-      fullname: fullname,
-      email: email,
-      phone: phone,
-      trainingfor: {
-        individual: trainingfor1,
-        group: trainingfor2,
-        corporate: trainingfor3
-      },
-      message: message
+    if (fullname.length === 0 || err.fullname != null) {
+      setErr({ submit1: "Enter valid Full Name" });
+    } else if (email.length === 0 || err.email != null) {
+      setErr({ submit2: "Enter Valid Email" });
+    } else if (phone.length === 0 || err.phone != null) {
+      setErr({ submit3: "Enter valid Phone Number" });
+    } else if (trainingfor1 === false && trainingfor2 === false && trainingfor3 === false) {
+      setErr({ submit4: "Choose atleast one training category" });
+    } else if (message.length === 0 || err.message != null) {
+      setErr({ submit5: "Enter valid message" });
     }
 
-    await axios.post(DevelopmentUrl + '/sents', form)
-      .then(res => {
-        console.log(res.data);
-        
-        setFullname('');
-        setEmail('');
-        setPhone('');
-        setTrainingfor1(false);
-        setTrainingfor2(false);
-        setTrainingfor3(false);
-        setMessage('');
-        setModalMessage("We have successfully received your query. We will get back to you in two working days");
+    else {
+      setIsLoading(true);
+      const form = {
+        fullname: fullname,
+        email: email,
+        phone: phone,
+        trainingfor: {
+          individual: trainingfor1,
+          group: trainingfor2,
+          corporate: trainingfor3
+        },
+        message: message,
+        title: "AWS Certification"
+      }
 
-      })
-      .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
+      await axios.post(DevelopmentUrl + '/sents', form)
+        .then(res => {
+          console.log(res.data);
 
+          setFullname('');
+          setEmail('');
+          setPhone('');
+          setTrainingfor1(false);
+          setTrainingfor2(false);
+          setTrainingfor3(false);
+          setMessage('');
+          setIsLoading(false);
+          setModalMessage("We have successfully received your query. We will get back to you in two working days");
+
+        })
+        .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
+    }
 
   }
 
@@ -379,7 +475,7 @@ function Certification() {
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title" id="exampleModalLabel">Please submit your query, we will get back to you!</h6>
-              <h3 type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h3 type="button" class="close" data-dismiss="modal" aria-label="Close" onClick={() => setModalMessage('')}>
                 <span aria-hidden="true">&times;</span>
               </h3>
             </div>
@@ -388,15 +484,42 @@ function Certification() {
                 <div className='row'>
                   <div class="form-group col-sm-4 ">
                     <label for="recipient-name" class="col-form-label">Full Name:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={fullname} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setFullname(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" name="fullname" value={fullname} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={fullnameHandle} />
+                    {err.fullname != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.fullname}</p>
+                    ) : (
+                      ""
+                    )}
+                    {err.submit1 != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.submit1}</p>
+                    ) : ''
+                    }
                   </div>
                   <div class="form-group col-sm-4">
                     <label for="recipient-name" class="col-form-label">Email:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={email} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setEmail(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" name="email" value={email} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={emailHandle} />
+                    {err.email != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.email}</p>
+                    ) : (
+                      ""
+                    )}
+                    {err.submit2 != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.submit2}</p>
+                    ) : ''
+                    }
                   </div>
                   <div class="form-group col-sm-4">
                     <label for="recipient-name" class="col-form-label">Phone Number:</label>
-                    <input type="text" class="form-control" id="recipient-name" value={phone} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setPhone(e.target.value)} />
+                    <input type="text" class="form-control" id="recipient-name" name="phone" value={phone} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={phonenoHandle} />
+                    {err.phone != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.phone}</p>
+                    ) : (
+                      ""
+                    )}
+                    {err.submit3 != null ? (
+                      <p style={{ color: "red", fontSize: "11px" }}>{err.submit3}</p>
+                    ) : ''
+                    }
                   </div>
                 </div>
 
@@ -420,18 +543,33 @@ function Certification() {
                       <input name="Corporate" type="checkbox" checked={trainingfor3} onChange={trainingHandler3} /> <span>&nbsp;&nbsp;&nbsp;</span> Corporate
                     </label>
                   </div>
+                  {err.submit4 != null ? (
+                    <p style={{ color: "red", fontSize: "11px" }}>{err.submit4}</p>
+                  ) : ''
+                  }
                 </div>
 
 
                 <div class="form-group">
                   <label for="message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="message-text" value={message} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={e => setMessage(e.target.value)}></textarea>
+                  <textarea class="form-control" id="message-text" name="message" value={message} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={messageHandle}></textarea>
+                  {err.message != null ? (
+                    <p style={{ color: "red", fontSize: "11px" }}>{err.message}</p>
+                  ) : (
+                    ""
+                  )}
+                  {err.submit5 != null ? (
+                    <p style={{ color: "red", fontSize: "11px" }}>{err.submit5}</p>
+                  ) : ''
+                  }
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <h6 class="modal-title " style={{ color: "#1266f1" }}>{modalMessage}</h6>
-              <button type="button" class="btn " onClick={EnquiryForm} >Submit</button>
+              {isLoading ? <LoadingSpinner /> : <h6 class="modal-title " style={{ color: "#1266f1" }}>{modalMessage}</h6>}
+
+              <button type="button" class="btn " onClick={EnquiryForm} disabled={isLoading}>Submit</button>
+
             </div>
           </div>
         </div>

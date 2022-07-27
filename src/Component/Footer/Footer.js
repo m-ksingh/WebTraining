@@ -54,18 +54,18 @@ function Footers() {
             Here you can use rows and columns to organize your footer content. Lorem ipsum
             dolor sit amet, consectetur adipisicing elit.
           </p> */}
-          <p>
+          {/* <p>
             <a href="#" class="text-reset">Training</a>
-          </p>
+          </p> */}
           <p>
-            <a href="#" class="text-reset">Certifications</a>
+            <a href="/certification" class="text-reset">Certifications</a>
           </p>
-          <p>
+          {/* <p>
             <a href="#" class="text-reset">Calender</a>
-          </p>
-          <p>
+          </p> */}
+          {/* <p>
             <a href="#" class="text-reset">About Us</a>
-          </p>
+          </p> */}
         </div>
        
         <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
