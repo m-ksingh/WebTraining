@@ -177,18 +177,19 @@ function Course() {
   const bckgroundcertificate = {
     backgroundImage: `url(${DevelopmentUrl}${from.bgImage.url})`,
     height: "500px",
-    opacity: 1
+    opacity: 1,
   };
+ 
 
   return (
     <>
 
-      <div class="p-5  bg-image" style={bckgroundcertificate}>
+      <div class="p-5  bg-image " style={bckgroundcertificate}>
         <div class="mask" >
           <div class="container-fluid">
             <div class="row p-5">
               <div class="col-sm-4 p-5 ">
-                <img src={`${DevelopmentUrl}${from.certImage.url}`} alt="Hollywood Sign on The Hill" />
+                <img src={`${DevelopmentUrl}${from.certImage.url}`} alt="courseImage" />
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
               <div class="col-sm-8 py-5 text-white ">
@@ -232,9 +233,7 @@ function Course() {
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="profile" aria-selected="false">Curriculum</button>
         </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#fee" type="button" role="tab" aria-controls="profile" aria-selected="false">Fees</button>
-        </li>
+       
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#FAQ" type="button" role="tab" aria-controls="contact" aria-selected="false">FAQs</button>
         </li>
@@ -254,66 +253,7 @@ function Course() {
 
           </ReactMarkdown>
         </div>
-        <div class="tab-pane fade" id="fee" role="tabpanel" aria-labelledby="contact-tab">
-
-          <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", boxShadow: "none", borderLeft: "2px solid #00BEFF" }}>
-            {/* <div class="card-header">
-    Featured
-  </div> */}
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Self-paced Learning</h5>
-                  <p class="card-text">- 40 Hrs e-learning videos <br /> - Flexible Schedule  <br /> -Lifetime Free Upgrade</p>
-                </div>
-                <div className='col-sm-2' >
-                  <h5 class="card-title">INR 13,000</h5>
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="card mt-4" style={{
-            width: "80rem", background: "#E7EEF0", borderRadius: "15px",
-            borderLeft: "2px solid #00BEFF", boxShadow: "none"
-          }}>
-            {/* <div class="card-header">
-    Featured
-  </div> */}
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Instructor-led Training</h5>
-                  <p class="card-text">-  Everything in Self-paced learning <br /> - 36 Hrs Instructor-led Training  <br /> -Flexible Schedule</p>
-                </div>
-                <div className='col-sm-2' >
-                  <h5 class="card-title">INR 29,995</h5>
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", borderLeft: "2px solid #00BEFF", boxShadow: "none" }}>
-            {/* <div class="card-header">
-    Featured
-  </div> */}
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Corporate Training</h5>
-                  <p class="card-text">- Customized Learning  <br /> - Enterprise grade Learning Management System (LMS)  <br /> -Enterprise grade Reporting</p>
-                </div>
-                <div className='col-sm-2' >
-                  {/* <h5 class="card-title">INR 13,000</h5> */}
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+       
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
           <ReactMarkdown>
