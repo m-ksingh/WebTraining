@@ -179,17 +179,25 @@ function Course() {
     height: "500px",
     opacity: 1,
   };
- 
+
+  const css = `
+    .bckgroundcertificate {
+        background-image: url(${DevelopmentUrl}${from.bgImage.url}),
+        height: "500px",
+        opacity: 1,
+    }
+   
+    `;
 
   return (
     <>
-
-      <div class="p-5  bg-image " style={bckgroundcertificate}>
+      <style scoped>{css}</style>
+      <div class="p-5  bg-image bckgroundcertificate">
         <div class="mask" >
           <div class="container-fluid">
             <div class="row p-5">
               <div class="col-sm-4 p-5 ">
-                <img src={`${DevelopmentUrl}${from.certImage.url}`} alt="courseImage" />
+                <img src={`${DevelopmentUrl}${from.certImage.url}`} className="imgbanner" alt="courseImage" />
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
               <div class="col-sm-8 py-5 text-white ">
@@ -233,7 +241,7 @@ function Course() {
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="profile" aria-selected="false">Curriculum</button>
         </li>
-       
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#FAQ" type="button" role="tab" aria-controls="contact" aria-selected="false">FAQs</button>
         </li>
@@ -253,7 +261,7 @@ function Course() {
 
           </ReactMarkdown>
         </div>
-       
+
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
           <ReactMarkdown>
