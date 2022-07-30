@@ -19,7 +19,6 @@ import suse from "../../Assets/Image/suse.png";
 import techdata from "../../Assets/Image/techdata.png";
 import DevelopmentUrl from "../../data/api";
 import { Link } from "react-router-dom";
-import Scrollindicator from '../../Component/Scrollindicator/Scrollindicator';
 
 function Home() {
   const [courseList, setCourseList] = useState([]);
@@ -30,12 +29,9 @@ function Home() {
     axios.get(DevelopmentUrl + '/courses')
       .then(res => {
         setCourseList(res.data);
-        console.log(res.data);
-       
         setCourseName('');
       })
       .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
-
   }, [])
 
   const onChangeHandler = (courseName) => {
@@ -47,31 +43,22 @@ function Home() {
             return list.title.match(regex)
         })
        }
-       console.log(filterCourseByName)
         setSuggestions(filterCourseByName)
         setCourseName(courseName)
-    
   }
 
   return (
     <>
-
-
       <div class="p-5  bg-image header">
         <div class="mask" style={{ backgroundcolor: " rgba(0, 0, 0, 0.6)" }}>
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
               <h1 class="mb-3 text-center">Learn from one of India's Biggest IT Training Provider</h1>
-
-
-
               <div class="search">
-
                 <input type="text" class="form-control" placeholder="Search From 500 + Courses"
                   onChange={e => onChangeHandler(e.target.value)}
                   value={courseName}
                 />
-
                 <button class="btn btn-primary">  <i class="fa fa-search"></i></button>
 
               </div>
@@ -84,11 +71,6 @@ function Home() {
               )}
              
               <h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
-              
-
-              {/* <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-          >Call to action</a  {suggestion.title}
-          > */}
             </div>
           </div>
         </div>
@@ -99,7 +81,6 @@ function Home() {
         <h4 class=" weare pt-5 ">Who We Are</h4>
 
         <p className='weareparagraph pb-3' >At Alchemy Solutions, we are driven to nurture and deliver solutions to people-specific problems. From our humble start in 2001 at our Bangalore headquarters, we’ve scaled the industry as India’s fastest growing HR company. Recruitment is not just about aptitude+attitude anymore, the industry demands more. Adapting to this idea, we’re focused on offering our clientele candidates who are also more reliable and a perfect cultural fit to their organisation.</p>
-
       </div>
 
       {/* client */}
@@ -107,33 +88,6 @@ function Home() {
       <div className='text-center'   >
         <h4 class="my-3 weare ">CLIENTELE</h4>
       </div>
-
-      {/* <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <img src={emc} alt =""  />
-    </div>
-    <div class="col-sm">
-    <img src={anz} alt =""  />
-    </div>
-    <div class="col-sm">
-    <img src={abb} alt =""  />
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-    <img src={tesco} alt ="" />
-    
-    </div>
-    <div class="col-sm">
-    <img src={info} alt =""  />
-   
-    </div>
-    <div class="col-sm">
-    <img src={mindtree} alt =""  />
-    </div>
-  </div>
-</div> */}
 
       <div class="slider">
         <div class="slide-track">
@@ -177,13 +131,8 @@ function Home() {
         </div>
       </div>
 
-      {/* trainingpartner */}
-
       <div className='text-center pt-5 pb-5 mt-5' style={{ background: "#E7EEF0" }} >
         <h4 class="my-3  weare ">TRAINING PARTNERS</h4>
-
-
-
         <div class="container pt-5">
           <div class="row">
             <div class="col-sm">
@@ -226,9 +175,6 @@ function Home() {
         </div>
       </div>
 
-      {/* contact us */}
-
-
       <div className='contactusmain' >
         <form  className='contactus'>
           <h1 class="text-white text-center">Contact Us</h1>
@@ -243,36 +189,14 @@ function Home() {
 
             <label for="the-phone">Phone Number</label>
             <input type="text" pattern="[6789][0-9]{9}" title="Please enter valid phone number" name="phone" id="the-phone" required />
-
-            {/* <label for="the-reason">How can we help you?</label>
-    <select name="reason" id="the-reason">
-    <option value="">Choose one</option>
-    <option value="web">I need web design services</option>
-    <option value="video">I need you to produce a video</option>
-    <option value="3d">I need 3D polygon things</option>
-  </select> */}
           </div>
           <div class="column">
             <label for="the-message">Message</label>
             <textarea name="message" id="the-message" required></textarea>
-            {/* <label>
-    <input type="checkbox" name="newsletter" value="yes"/> Join our mailing list?
-    </label> */}
             <input type="submit" value="Send Message" />
           </div>
         </form>
       </div>
-
-      {/* last  */}
-
-
-      {/* <div
-  class=" footer bg-image d-flex justify-content-center align-items-center"
- 
->
-  <h1 class="text-white">We Make IT Training Work !!</h1>
-</div> */}
-
     </>
   )
 }
