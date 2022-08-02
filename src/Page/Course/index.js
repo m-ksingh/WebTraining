@@ -174,20 +174,12 @@ function Course() {
 
   }
 
-  const bckgroundcertificate = {
-    backgroundImage: `url(${DevelopmentUrl}${from.bgImage.url})`,
-    height: "500px",
-    opacity: 1,
-  };
-
   const css = `
     .bckgroundcertificate {
         background-image: url(${DevelopmentUrl}${from.bgImage.url}),
         height: "500px",
         opacity: 1,
-    }
-   
-    `;
+    } `;
 
   return (
     <>
@@ -230,10 +222,7 @@ function Course() {
           </div>
         </div>
       </div>
-      {/* Calender */}
-
-
-      {/* Tab */}
+   
       <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Overview</button>
@@ -270,12 +259,6 @@ function Course() {
           </ReactMarkdown>
         </div>
       </div>
-
-
-
-
-
-
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -328,7 +311,6 @@ function Course() {
                     }
                   </div>
                 </div>
-
                 <div class=" row  " >
                   <div className='col-sm-3'>
                     <label className=' col-form-label'>Training For :</label>
@@ -354,8 +336,6 @@ function Course() {
                   ) : ''
                   }
                 </div>
-
-
                 <div class="form-group">
                   <label for="message-text" class="col-form-label">Message:</label>
                   <textarea class="form-control" id="message-text" name="message" value={message} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={messageHandle}></textarea>
@@ -372,7 +352,6 @@ function Course() {
               </form>
             </div>
             <div class="modal-footer">
-              {/* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> */}
               {isLoading ? <LoadingSpinner /> : <h6 class="modal-title " style={{ color: "#1266f1" }}>{modalMessage}</h6>}
 
               <button type="button" class="btn " onClick={EnquiryForm} disabled={isLoading}>Submit</button>
@@ -381,10 +360,6 @@ function Course() {
           </div>
         </div>
       </div>
-
-
-
-
     </>
   )
 }

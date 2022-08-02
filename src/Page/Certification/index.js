@@ -23,6 +23,7 @@ function Certification() {
     const phone = /^[0-9]{10}$/;
     const fullname = /^[a-zA-Z\s]*$/;
     const email = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
     switch (name) {
       case "fullname":
         if (!value || value.trim() === "") {
@@ -193,40 +194,30 @@ function Certification() {
                 <hr />
                 <div className='row'>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/3392/premium/3392394.png?token=exp=1658310191~hmac=d2b2ec422f85f7a98d973ba9d8587512' height="30px" />
+                    <img src='https://cdn-icons.flaticon.com/png/128/3392/premium/3392394.png?token=exp=1658310191~hmac=d2b2ec422f85f7a98d973ba9d8587512' alt="instructor" height="30px" />
                     <p className=' px-3'>36 Hrs Instructor-Led Training </p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/591/premium/591576.png?token=exp=1658310050~hmac=5e5f970abdbad1acf9f31ea9b5849044' height="30px" />
+                    <img src='https://cdn-icons.flaticon.com/png/128/591/premium/591576.png?token=exp=1658310050~hmac=5e5f970abdbad1acf9f31ea9b5849044' alt="flex schedule" height="30px" />
                     <p className=' px-3'>Flexible Schedule</p>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-sm-6 d-flex '>
-                    <img src='https://cdn-icons.flaticon.com/png/128/749/premium/749085.png?token=exp=1658308807~hmac=1ac82058417768b807ed7c41a28f50d0' height="30px" />
+                    <img src='https://cdn-icons.flaticon.com/png/128/749/premium/749085.png?token=exp=1658308807~hmac=1ac82058417768b807ed7c41a28f50d0' alt="lifetime access" height="30px" />
                     <p className=' px-3'>Lifetime access</p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons-png.flaticon.com/128/5427/5427040.png' height="30px" />
+                    <img src='https://cdn-icons-png.flaticon.com/128/5427/5427040.png' alt="exercises" height="30px" />
                     <p className='px-3'>Project & Exercises</p>
                   </div>
                 </div>
-
-
-
               </div>
-
             </div>
           </div>
         </div>
 
-
-
       </div>
-      {/* Calender */}
-
-
-      {/* Tab */}
       <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Overview</button>
@@ -234,21 +225,14 @@ function Certification() {
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="profile" aria-selected="false">Curriculum</button>
         </li>
-        {/* <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#fee" type="button" role="tab" aria-controls="profile" aria-selected="false">Fees</button>
-        </li> */}
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#FAQ" type="button" role="tab" aria-controls="contact" aria-selected="false">FAQs</button>
         </li>
       </ul>
       <div class="tab-content content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
           <div >
-
-
             <p className='tab1pargraph' >In this comprehensive AWS certification course led by industry experts, you will learn skills such as AWS Elastic Cloud Compute, Simple Storage Service, VPC, Aurora database service, Load Balancing, Auto Scaling, AWS S3, etc. This AWS training will also prepare you for the AWS Solutions Architect certification exam.</p>
-
             <h6 className='headingpragraph'>What will you learn in the online AWS training?</h6>
             <p className='tab1pargraph'>The following are the learning outcomes of this AWS Solutions Architect Associate course:</p>
 
@@ -289,14 +273,7 @@ function Certification() {
               - AWS Systems Administrator</p>
 
           </div>
-
-
         </div>
-
-
-
-
-
         <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="profile-tab">
           <h6 className='headingpragraph'>Module 01 - Introduction to Cloud Computing & AWS</h6>
           <p className='tab1pargraph'>1.1 - What is Cloud Computing <br />
@@ -384,64 +361,6 @@ function Certification() {
 
         </div>
         <div class="tab-pane fade" id="fee" role="tabpanel" aria-labelledby="contact-tab">
-
-          {/* <div class="card mt-5" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", boxShadow: "none", borderLeft: "2px solid #00BEFF" }}>
-            <div class="card-header">
-    Featured
-  </div>
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Self-paced Learning</h5>
-                  <p class="card-text">- 40 Hrs e-learning videos <br /> - Flexible Schedule  <br /> -Lifetime Free Upgrade</p>
-                </div>
-                <div className='col-sm-2' >
-                  <h5 class="card-title">INR 13,000</h5>
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div> */}
-          {/* <div class="card mt-4" style={{
-            width: "80rem", background: "#E7EEF0", borderRadius: "15px",
-            borderLeft: "2px solid #00BEFF", boxShadow: "none"
-          }}>
-            <div class="card-header">
-    Featured
-  </div>
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Instructor-led Training</h5>
-                  <p class="card-text">-  Everything in Self-paced learning <br /> - 36 Hrs Instructor-led Training  <br /> -Flexible Schedule</p>
-                </div>
-                <div className='col-sm-2' >
-                  <h5 class="card-title">INR 29,995</h5>
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div> */}
-          {/* <div class="card mt-4" style={{ width: "80rem", background: "#E7EEF0", borderRadius: "15px", borderLeft: "2px solid #00BEFF", boxShadow: "none" }}>
-            <div class="card-header">
-    Featured
-  </div>
-            <div class="card-body">
-              <div class="row">
-                <div className='col-sm-10'>
-                  <h5 class="card-title">Corporate Training</h5>
-                  <p class="card-text">- Customized Learning  <br /> - Enterprise grade Learning Management System (LMS)  <br /> -Enterprise grade Reporting</p>
-                </div>
-                <div className='col-sm-2' >
-                  <h5 class="card-title">INR 13,000</h5>
-                  <a href="#" class="btn " style={{ background: "#00BEFF", color: "white", border: "1px solid #00BEFF" }}>Enquiry</a>
-                </div>
-              </div>
-            </div>
-
-          </div> */}
         </div>
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
@@ -464,11 +383,6 @@ function Certification() {
 
         </div>
       </div>
-
-
-
-
-
 
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -574,10 +488,6 @@ function Certification() {
           </div>
         </div>
       </div>
-
-
-
-
     </>
   )
 }
