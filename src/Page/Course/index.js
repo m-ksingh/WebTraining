@@ -4,13 +4,17 @@ import ReactMarkdown from 'react-markdown'
 import DevelopmentUrl from "../../data/api";
 import { useLocation } from "react-router-dom";
 import LoadingSpinner from "../../Component/LoadingSpinner/LoadingSpinner";
-import "../../Component/Css/Home.css"
-import "../../Component/Css/Certification.css"
+import "../../Component/Css/Home.css";
+import "../../Component/Css/Certification.css";
+import instructor from "../../Assets/Image/instructor.png";
+import schedule from "../../Assets/Image/timetable.png";
+import lifetime from "../../Assets/Image/lifetime.png";
+import configuration from "../../Assets/Image/configuration.png";
 
 function Course() {
   const location = useLocation();
   const { from } = location.state;
-
+  let css = '';
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -173,13 +177,14 @@ function Course() {
     }
 
   }
-
-  const css = `
+  if (from.hasOwnProperty("bgImage") === true) {
+    css = `
     .bckgroundcertificate {
         background-image: url(${DevelopmentUrl}${from.bgImage.url}),
         height: "500px",
         opacity: 1,
     } `;
+  }
 
   return (
     <>
@@ -189,30 +194,34 @@ function Course() {
           <div class="container-fluid">
             <div class="row p-5">
               <div class="col-sm-4 p-5 ">
-                <img src={`${DevelopmentUrl}${from.certImage.url}`} className="imgbanner" alt="courseImage" />
+                {
+                  from.hasOwnProperty("certImage") === true ? 
+                  <img src={`${DevelopmentUrl}${from.certImage.url}`} className="imgbanner" alt="courseImage" />: ''
+                }
+                
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
               <div class="col-sm-8 py-5 text-white ">
-                <h4 className='cname'>{from.title}</h4>
-                <p className='pt-4 cname'>{from.description}</p>
+                <h4 className='cname'>{from.hasOwnProperty("title") === true ? from.title : ""}</h4>
+                <p className='pt-4 cname'>{from.hasOwnProperty("description") === true ? from.description : ""}</p>
                 <hr />
                 <div className='row'>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/3392/premium/3392394.png?token=exp=1658310191~hmac=d2b2ec422f85f7a98d973ba9d8587512' height="30px" />
+                    <img src={instructor} height="30px" />
                     <p className=' px-3'>36 Hrs Instructor-Led Training </p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons.flaticon.com/png/128/591/premium/591576.png?token=exp=1658310050~hmac=5e5f970abdbad1acf9f31ea9b5849044' height="30px" />
+                    <img src={schedule} height="30px" />
                     <p className=' px-3'>Flexible Schedule</p>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-sm-6 d-flex '>
-                    <img src='https://cdn-icons.flaticon.com/png/128/749/premium/749085.png?token=exp=1658308807~hmac=1ac82058417768b807ed7c41a28f50d0' height="30px" />
+                    <img src={lifetime} height="30px" />
                     <p className=' px-3'>Lifetime access</p>
                   </div>
                   <div className='col-sm-6 d-flex'>
-                    <img src='https://cdn-icons-png.flaticon.com/128/5427/5427040.png' height="30px" />
+                    <img src={configuration} height="30px" />
                     <p className='px-3'>Project & Exercises</p>
                   </div>
                 </div>
@@ -222,7 +231,7 @@ function Course() {
           </div>
         </div>
       </div>
-   
+
       <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Overview</button>
@@ -240,13 +249,15 @@ function Course() {
 
           <div >
             <ReactMarkdown>
-              {from.overview}
+              {from.hasOwnProperty("overview") === true ? from.overview : ""}
+              {/* {from.overview} */}
             </ReactMarkdown>
           </div>
         </div>
         <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="profile-tab">
           <ReactMarkdown >
-            {from.curriculum}
+            {from.hasOwnProperty("curriculum") === true ? from.curriculum : ""}
+            {/* {from.curriculum} */}
 
           </ReactMarkdown>
         </div>
@@ -254,7 +265,8 @@ function Course() {
         <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
 
           <ReactMarkdown>
-            {from.faqs}
+            {from.hasOwnProperty("faqs") === true ? from.faqs : ""}
+            {/* {from.faqs} */}
 
           </ReactMarkdown>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import alchemylogo from "../../Assets/Image/Alchemy Solutions - Logo.png";
+import pdf from "../../Assets/Image/abc.pdf";
 import "../Css/Footer.css"
 
 function Footers() {
@@ -42,7 +43,12 @@ function Footers() {
 
                 <img src={alchemylogo} height="40" alt="alchemy solution" />
                 <p>
-                  <a href="/certification" class="text-reset">Certifications</a>
+                <a href="" class="text-reset">Hire train and deploy</a>
+          
+                </p>
+                <p><a href="" class="text-reset">Cloud labs</a></p>
+                <p>
+                  <a href="/" class="text-reset">Certifications</a>
                 </p>
               </div>
               <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">

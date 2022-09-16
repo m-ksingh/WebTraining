@@ -4,12 +4,38 @@
 
 
 }
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
 
 .search {
   position: relative;
   box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+  /* border: 2px solid #d6d4d4; */
 
+  border-radius: 20px;
+  height: 50px;
+  width: 100%;
+  /* padding: 2px 23px 2px 30px; */
+  
+  background-color: #f5f5f5;
 }
+
+
+
+
+
+.search:hover, .search:focus {
+  border: 1px solid #009688;
+  background-color: white;
+}
+/* .search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+
+} */
 
 .search input {
 
@@ -42,10 +68,10 @@
 
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 10px;
   height: 40px;
   width: 40px;
-  background: #707070;
+  background: #458DA8;
   border-radius: 10px;
 
 }
@@ -115,7 +141,117 @@
   margin-right: 100px;
 }
 
+.aboutus-section {
+  padding: 90px 0;
+}
+.aboutus-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin: 0 0 39px;
+  padding: 0 0 11px;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+}
+.aboutus-title::after {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+  border-image-slice: 1;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 54px;
+}
+.aboutus-text {
+  color: #606060;
+  font-size: 13px;
+  line-height: 22px;
+  margin: 0 0 35px;
+}
 
+a:hover, a:active {
+  color: #ffb901;
+  text-decoration: none;
+  outline: 0;
+}
+.aboutus-more {
+  border: 1px solid #fdb801;
+  border-radius: 25px;
+  color: #fdb801;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 7px 20px;
+  text-transform: uppercase;
+}
+.feature .feature-box .iconset {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  position: relative;
+  width: 10%;
+}
+.feature .feature-box .iconset::after {
+  background: #fdb801 none repeat scroll 0 0;
+
+  content: "";
+  height: 150%;
+  left: 43%;
+  position: absolute;
+  top: 100%;
+  width: 1px;
+}
+
+.feature .feature-box .feature-content h4 {
+  color: #0f0f0f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin: 0 0 5px;
+}
+
+
+.feature .feature-box .feature-content {
+  float: left;
+  padding-left: 28px;
+  width: 78%;
+}
+.feature .feature-box .feature-content h4 {
+  color: #0f0f0f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin: 0 0 5px;
+}
+.feature .feature-box .feature-content p {
+  color: #606060;
+  font-size: 13px;
+  line-height: 22px;
+}
+.icon {
+  color : #f4b841;
+  padding:0px;
+  font-size:40px;
+  border: 1px solid #fdb801;
+  border-radius: 100px;
+  color: #fdb801;
+  font-size: 28px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  width: 70px;
+}
+.profile{
+  border: 3px solid transparent;
+height: auto;
+
+  border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+  border-image-slice: 1;
+}
 
 
 @keyframes scroll {
@@ -147,17 +283,25 @@
   width: 250px;
 }
 
-
+.contactusmain{
+ background-image: url('../../Assets/Image/msss_cleanup.JPG');
+  margin-top: -20px;
+  background-position: center;
+ background-repeat: repeat-x;
+ background-position-y: bottom;
+ margin-bottom: -20px;
+}
 .contactus {
-  background: white;
+  background: #458da896;
 
   max-width: 800px;
   margin: 30px auto;
   font-family: Calibri, Arial, sans-serif;
   padding: 20px;
 
-  background-image: url("../../Assets/Image/Group\ 345.png");
-  opacity: 1;
+  /* background-image: url("../../Assets/Image/Group\ 345.png");
+  opacity: 1; */
+  /* background-color: #E7EEF0; */
   border-radius: 10px;
 }
 
@@ -200,7 +344,7 @@ input[type=checkbox] {
 }
 
 input[type=submit] {
-  background: lightcoral;
+  background: #458DA8;
   margin: 1em 0 0;
   color: white;
   border: none;
@@ -251,5 +395,21 @@ input[type=submit]:focus {
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .profile{
+    display: none;
+  }
+  .trainingpartne-mobile{
+    display: none;
+  }
+ 
+}
+
+@media screen and (max-width:1200px) {
+  .profile{
+height: 300px;
+  }
+  .feature{
+    margin-top: -70px;
   }
 }
