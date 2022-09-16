@@ -185,7 +185,7 @@ function Home() {
       {/* client */}
 
       <div className='text-center'   >
-        <h4 class="my-2 weare ">CLIENTELE</h4>
+        <h4 class="my-2 pb-4 weare ">CLIENTELE</h4>
       </div>
 
       <div class="slider contactusmain">
