@@ -78,7 +78,7 @@ function Navbar() {
               <li><a href="">IBM</a></li>
               <li><a href="">SAP</a></li>
               <li><a href="">Big Data & Analytics</a></li>
-              <li><a href="">Deveops</a></li>
+              <li><a href="">DevOps</a></li>
               <li><a href="">CompTia</a></li>
             </ul>
           </li>
