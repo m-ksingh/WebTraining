@@ -58,13 +58,13 @@ function Course() {
           setErr("");
         }
         break;
-      case "message":
-        if (!value || value.trim() === "") {
-          setErr({ message: "Message is required" });
-        } else {
-          setErr("");
-        }
-        break;
+      // case "message":
+      //   if (!value || value.trim() === "") {
+      //     setErr({ message: "Message is required" });
+      //   } else {
+      //     setErr("");
+      //   }
+      //   break;
       default: {
         return "";
       }
@@ -122,11 +122,12 @@ function Course() {
 
   const messageHandle = (e) => {
     const value = e.target.value;
-    const name = e.target.name;
-    const validateResult = validate(name, value);
-    if (!validateResult) {
-      setMessage(value);
-    }
+    setMessage(value);
+    // const name = e.target.name;
+    // const validateResult = validate(name, value);
+    // if (!validateResult) {
+    //   setMessage(value);
+    // }
   }
   const EnquiryForm = async (e) => {
 
@@ -139,9 +140,10 @@ function Course() {
       setErr({ submit3: "Enter valid Phone Number" });
     } else if (trainingfor1 === false && trainingfor2 === false && trainingfor3 === false) {
       setErr({ submit4: "Choose atleast one training category" });
-    } else if (message.length === 0 || err.message != null) {
-      setErr({ submit5: "Enter valid message" });
-    }
+    } 
+    // else if (message.length === 0 || err.message != null) {
+    //   setErr({ submit5: "Enter valid message" });
+    // }
 
     else {
       setIsLoading(true);
@@ -351,7 +353,7 @@ function Course() {
                 <div class="form-group">
                   <label for="message-text" class="col-form-label">Message:</label>
                   <textarea class="form-control" id="message-text" name="message" value={message} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={messageHandle}></textarea>
-                  {err.message != null ? (
+                  {/* {err.message != null ? (
                     <p style={{ color: "red", fontSize: "11px" }}>{err.message}</p>
                   ) : (
                     ""
@@ -359,7 +361,7 @@ function Course() {
                   {err.submit5 != null ? (
                     <p style={{ color: "red", fontSize: "11px" }}>{err.submit5}</p>
                   ) : ''
-                  }
+                  } */}
                 </div>
               </form>
             </div>
