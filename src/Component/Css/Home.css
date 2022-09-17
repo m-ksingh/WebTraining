@@ -174,7 +174,7 @@
 }
 
 a:hover, a:active {
-  color: #ffb901;
+  /* color: #ffb901; */
   text-decoration: none;
   outline: 0;
 }
@@ -358,7 +358,8 @@ select:focus,
 select:hover,
 textarea:focus,
 textarea:hover {
-  background: lavenderBlush;
+  /* background: lavenderBlush; */
+  outline: none;
 }
 
 /* hover and focus states */
