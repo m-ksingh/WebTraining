@@ -102,6 +102,7 @@ function Course() {
       setTrainingfor1(false)
     } else {
       setTrainingfor1(e.target.name);
+      setErr({ submit4: "" });
     }
 
   }
@@ -110,6 +111,7 @@ function Course() {
       setTrainingfor2(false)
     } else {
       setTrainingfor2(e.target.name);
+      setErr({ submit4: "" });
     }
   }
   const trainingHandler3 = (e) => {
@@ -117,6 +119,7 @@ function Course() {
       setTrainingfor3(false)
     } else {
       setTrainingfor3(e.target.name);
+      setErr({ submit4: "" });
     }
   }
 
@@ -140,11 +143,7 @@ function Course() {
       setErr({ submit3: "Enter valid Phone Number" });
     } else if (trainingfor1 === false && trainingfor2 === false && trainingfor3 === false) {
       setErr({ submit4: "Choose atleast one training category" });
-    } 
-    // else if (message.length === 0 || err.message != null) {
-    //   setErr({ submit5: "Enter valid message" });
-    // }
-
+    }
     else {
       setIsLoading(true);
       const form = {
@@ -345,7 +344,7 @@ function Course() {
                       <input name="Corporate" type="checkbox" checked={trainingfor3} onChange={trainingHandler3} /> <span>&nbsp;&nbsp;&nbsp;</span> Corporate
                     </label>
                   </div>
-                  {err.submit4 != null ? (
+                  {err.submit4 !== null ? (
                     <p style={{ color: "red", fontSize: "11px" }}>{err.submit4}</p>
                   ) : ''
                   }
