@@ -1,6 +1,6 @@
 .TrainingBanner {
-    background-image: url("../../Assets/Image/TrainingBanner.png");
-    height: 650px;
+    background-image: url("../../Assets/Image/trainingbanner.gif");
+    height: 450px;
   
   
   }
@@ -13,73 +13,199 @@
   .btntraining:hover{
     color: aliceblue;
   }
-  .column {
-    float: left;
-    width: 50%;
-    padding: 20px 10px 20px 55px;
-    height: auto; 
+  .counter
+  {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.32);
+      text-align: center;
+  }
+  .employees,.customer,.design,.order
+  {
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  .counter-count
+  {
+      font-size: 18px;
+      background-color: #00b3e7;
+      border-radius: 50%;
+      border: 1px solid #00b3e7;
+      /* border-right: 2px solid green;
+      border-bottom: 2px solid red;
+      border-left: 2px solid pink; */
+      position: relative;
+      color: #ffffff;
+      text-align: center;
+      line-height: 92px;
+      width: 100px;
 
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      display: inline-block;
   }
-  .row{
-    border-radius: 10px;
+  
+  .employee-p,.customer-p,.order-p,.design-p
+  {
+      font-size: 15px;
+      color: #fff;
+      line-height: 20px;
   }
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .tabss{
-    margin-left: 105px !important;
+
+  .request{
+
+    text-transform: none;
+    width: 200px;
+    height: 40px;
+    /* UI Properties */
+    background: #00BEFF 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+    opacity: 1;
+    color: white;
+    font-family: "Poppins" ;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-left: 80px;
+    border: none;
+    margin-top: 70px;
+       }
+       .cards-button{
+       
+        width: 100%;
+        height: 60px;
+        /* UI Properties */
+        background: #00BEFF 0% 0% no-repeat padding-box;
+        border-radius: 9px;
+    
+        color: white;
+      text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+       padding-top: 10px;
+        border: none;
+        text-align: center;
+       }
+       .bb{
+        background-image: url('../../Assets/Image/msss_cleanup.JPG');
+       }
+       .trainig-scroll{
+        height: 260px;
+        overflow-y: scroll;
+        
+       }
+       .trainig-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      /* Track */
+      .trainig-scroll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #EFA47F; 
+        border-radius: 5px;
+      }
+       
+      /* Handle */
+      .trainig-scroll::-webkit-scrollbar-thumb {
+        background: #EFA47F; 
+        border-radius: 5px;
+      }
+      .card-text{
+        text-align: justify;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      table{
+        margin-left: auto;  
+margin-right: auto;  
+border-collapse: collapse;
+      }
+
+      .hello{
+        background-image: url("../../Assets/Image/bg-sand-wave.png");
+        background-repeat: no-repeat;
+        min-height: 620px;
+        padding-top: 60px;
+
+        /* background-position: right 0 bottom 0; */
+        background-size: 100%;
+        
+      }
+      .Contain{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .testimonial-wrapper{
+        max-width: 640px;
+    padding-right: 20px;
+    margin-top: 30px;
+      }
+      .logos {
+        padding-top: 30px
+      }
+      .logos img {
+        max-width: 155px;
+        max-height: 100px;
+        padding: 5px;
+        font-weight: 900;
+      }
+      tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+   
+  .logos table td {
+    border: dashed 1px #dbdbdb;
+    padding: 15px;
+    text-align: center
   }
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .tabss {
-      margin-left: 0px !important;
-    }
-    .nav-tabs .nav-link {
-      border: solid transparent;
-      border-width: 0 0 1px;
-      border-radius: 0;
-      text-transform: uppercase;
-      line-height: 1;
-      font-weight: bold;
-      font-size: 16px;
-     
-      padding: 17px 0px 10px 10px;
-      margin-left: 50px;
-  
-      font-family: "Poppins" ;
-  
-      color: #707070;
-    
-  }
-  }
-  
-  .nav-tabs .nav-link.active {
-    color: white;
-    border-color: #1266f1;
-    background:#1A576A;
-    padding: 20px 20px 20px 20px;
-    border-radius: 10px;
-  
  
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	.hello{
+    background-image: none;
+background-color: #F5F9F4;
   }
-  .abc{
-    border-right: 1px solid red;
-  }
-  .responsivesearch{
-    margin-left: 500px;
-    margin-bottom: 100px;
-  }
-  @media screen and (max-width: 600px) {
-    .responsivesearch {
-      margin-left: 0px !important;
-      margin-bottom: 0px !important;
-    }
-  }
+	
+}

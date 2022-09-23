@@ -193,7 +193,7 @@ function Course() {
       <div class="p-5  bg-image bckgroundcertificate">
         <div class="mask" >
           <div class="container-fluid">
-            <div class="row p-5">
+            <div class="row p-5 maincourse">
               <div class="col-sm-4 p-5 ">
                 {
                   from.hasOwnProperty("certImage") === true ? 
@@ -202,7 +202,7 @@ function Course() {
                 
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
-              <div class="col-sm-8 py-5 text-white ">
+              <div class="col-sm-8 py-5 textparagraph ">
                 <h4 className='cname'>{from.hasOwnProperty("title") === true ? from.title : ""}</h4>
                 <p className='pt-4 cname'>{from.hasOwnProperty("description") === true ? from.description : ""}</p>
                 <hr />

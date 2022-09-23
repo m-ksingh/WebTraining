@@ -52,7 +52,13 @@ color: yellow;
 body{
   min-height: 100vh;
 } */
-.navbar{
+
+
+
+
+
+
+/* .navbar{
     box-shadow: none;
 }
 nav{
@@ -74,7 +80,7 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  /* background: red; */
+
   padding: 0 50px;
 }
 .navbar .logo a{
@@ -112,7 +118,7 @@ nav .navbar .links li a{
   }
 
 nav .navbar .links li .arrow{
-  /* background: red; */
+  
   height: 100%;
   width: 22px;
   line-height: 70px;
@@ -312,10 +318,10 @@ nav .navbar .links li .sub-menu li{
     display: none;
   }
   .navbar .links li .sub-menu .more span{
-    /* background: red; */
+    
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    
   }
 
   .links li .sub-menu .more:hover .more-sub-menu{
@@ -347,4 +353,177 @@ nav .navbar .links li .sub-menu li{
 
 
 
+ */
 
+
+ .scroll-bar{
+  height: 300px;
+  overflow-y: scroll;
+  
+ }
+ .scroll-bar::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.scroll-bar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #EFA47F; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: #EFA47F; 
+  border-radius: 5px;
+}
+ header .navbar ul li a .arrow{
+  
+  
+  transition: all 0.3s ease;
+}
+ header .navbar ul li a :hover .htmlcss-arrow,
+ header .navbar ul li a:hover .js-arrow{
+  transform: rotate(180deg);
+  }
+.navbar{
+  box-shadow: none;
+}
+ header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #458DA8;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  height: 70px;width: 100%;
+  
+  
+  }
+ 
+  
+  header .logo {
+  
+  font-size: 15px;
+    font-weight: 500;
+    padding-left: 125px;
+  }
+  header .navbar ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-right: 120px;
+  }
+  header .navbar ul li {
+  position: relative;
+  float: left;
+  }
+  header .navbar ul li a {
+
+  padding: 15px;
+  background: #458DA8;
+  display: block;
+  color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  /* header .navbar ul li a:hover {
+  background: #333;
+  color: white;
+  } */
+  
+  header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 210px;
+  background: #458DA8;
+  display: none;
+  }
+  header .navbar ul li ul li {
+  width: 100%;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.534); */
+  }
+  header .navbar ul li ul li ul {
+  left: 180px;
+  top: 0;
+  }
+  header .navbar ul li:focus-within > ul,
+  header .navbar ul li:hover > ul {
+  display: initial;
+  }
+  
+  #menu-bar {
+  display: none;
+  }
+  header label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+  }
+  @media (max-width: 991px) {
+  header {
+  padding: 20px;
+  }
+  header label {
+  display: initial;
+  }
+  header .navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #458DA8;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
+  }
+  header .logo{
+    padding-left: 0px;
+  }
+  header .navbar ul{
+    padding-right: 0px;
+  }
+  header .navbar ul li {
+  width: 100%;
+  }
+  header .navbar ul li ul {
+  position: relative;
+  width: 100%;
+  }
+  header .navbar ul li ul li {
+  background: #eee;
+  }
+  header .navbar ul li ul li ul {
+  width: 100%;
+  left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+  display: initial;
+  }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1215px){
+    header .navbar {
+     
+     
+      left: 0;
+      right: 0;
+      
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+     width: 100%;
+      }
+      header .navbar ul{
+        padding-right: 0px;
+      }
+      header .logo{
+        padding-left: 0px;
+      }
+    }
+  
+  
+  

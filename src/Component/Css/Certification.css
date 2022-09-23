@@ -102,12 +102,15 @@ opacity: 1;
   .cname{
     font-family: 'poppins';
   }
+  .textparagraph{
+color: white;
+  }
   @media screen and (max-width: 600px) {
-    .card {
+    /* .card {
      width: 18rem !important;
      margin: 0px -50px;
 
-    }
+    } */
     .content {
       margin-left: 70px;
       margin-top: 20px;
@@ -124,7 +127,11 @@ opacity: 1;
       margin-left: 0px;
      
     }
-    .text-white{
+    .maincourse{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .textparagraph{
       text-align: justify;
     }
   }
@@ -132,4 +139,41 @@ opacity: 1;
   .imgbanner{
 display: none;
   }
+}
+@media screen and (max-width: 992px){
+  .imgbanner{
+    display: none;
+      }
+      .enquirybutton{
+        margin-left: 0px;
+       
+      }
+     
+}
+
+@media screen and (min-device-width: 601px) and (max-device-width: 1300px) { 
+  .maincourse{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .bckgroundcertificate{
+    height: 550px;
+  }
+  .textparagraph{
+    width: 100%;
+  }
+  .imgbanner{
+    display: none;
+      }
+      .enquirybutton{
+ align-items: center;
+       
+      }
+}
+
+@media screen and (min-device-width: 1301px) and (max-device-width: 1430px) { 
+  .imgbanner{
+    margin-left: -50px;
+      }
+
 }

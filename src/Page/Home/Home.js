@@ -63,17 +63,18 @@ function Home() {
                   value={courseName}
                 />
                 <button class="btn btn-primary">  <i class="fa fa-search"></i></button>
-                {suggestions && suggestions.map((suggestion, i) =>
-                <div key={i} style={{ background: "white", padding: "10px 5px 10px 25px  " }}>
-                  <Link to='/Courses'
-                    state={{ from: suggestion }} >{suggestion.title}</Link>
-                </div>
-              )}
+                {suggestions.length > 0 && courseName.length > 0 ?  suggestions.map((suggestion, i) =>
+                    <div key={i} style={{ background: "white", padding: "5px 5px 5px 25px  " }}>
+                        <Link to='/Courses'
+                            state={{ from: suggestion }} >{suggestion.title}</Link>
+                    </div>
+                ): <div style={{padding: "5px 5px 5px 25px ", color:"#EFA47F"}}>{suggestions.length === 0 && courseName.length > 0 ? <p >Oops !! No Courses found. &nbsp;&#128528;</p> : ''}</div>
+                }
               </div>
              
              
 
-              <h6 class="mb-3 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
+              <h6 class="mb-4 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@ function Home() {
                   <div class="clearfix">
                     <div class="iconset">
                       <span >
-                        <img src={anz} alt="icon" height="28" />
+                        <img src={anz} alt="icon" height="25" />
                       </span>
                     </div>
                     <div class="feature-content">
@@ -208,7 +209,25 @@ function Home() {
           <div class="slide">
             <img src={mindtree} height="90" width="250" alt="" />
           </div>
-
+{/* repeatd */}
+<div class="slide">
+            <img src={info} height="60" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={tesco} height="70" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={emc} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={anz} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={abb} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={mindtree} height="90" width="250" alt="" />
+          </div>
 
 
           {/* <div class="slide">
