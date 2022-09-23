@@ -7,6 +7,7 @@ import Certification from './Page/Certification';
 import CloudLab from './Page/CloudLab';
 import Course from './Page/Course/index';
 import Home from './Page/Home/Home';
+import Oemoffering from './Page/OEM/Oemoffering';
 import Training from './Page/Training/Training';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
          <Route  path='/' element ={<Home/>}/>
         {/* <Route  path='/certification' element ={<Certification/>}/> */}
         <Route  path='/Courses' element ={<Course/>}/>
-        <Route  path='/oem/:oemtitle' element ={<Course/>}/>
+        <Route  path='/oem/:oemtitle' element ={<Oemoffering/>}/>
         <Route  path='/certificate/:certificatetitle' element ={<Course/>}/>
         <Route  path='/hire-Train-Deploy' element ={<Training/>}/>
         <Route path ="/cloud-Lab" element = {<CloudLab/>}/>
