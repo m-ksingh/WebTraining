@@ -43,13 +43,13 @@ function Footers() {
 
                 <img src={alchemylogo} height="40" alt="alchemy solution" />
                 <p>
-                <a href="" class="text-reset">Hire train and deploy</a>
+                <a href="/hire-Train-Deploy" class="text-reset">Hire train and deploy</a>
           
                 </p>
-                <p><a href="" class="text-reset">Cloud labs</a></p>
-                <p>
+                <p><a href="/cloud-Lab" class="text-reset">Cloud labs</a></p>
+                {/* <p>
                   <a href="/" class="text-reset">Certifications</a>
-                </p>
+                </p> */}
               </div>
               <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
                 <h6 class="text-uppercase fw-bold mb-4">
