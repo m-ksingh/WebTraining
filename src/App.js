@@ -28,6 +28,8 @@ function App() {
          <Route  path='/' element ={<Home/>}/>
         {/* <Route  path='/certification' element ={<Certification/>}/> */}
         <Route  path='/Courses' element ={<Course/>}/>
+        <Route  path='/oem/:oemtitle' element ={<Course/>}/>
+        <Route  path='/certificate/:certificatetitle' element ={<Course/>}/>
         <Route  path='/hire-Train-Deploy' element ={<Training/>}/>
         <Route path ="/cloud-Lab" element = {<CloudLab/>}/>
       </Routes>

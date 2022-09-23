@@ -1,12 +1,33 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../Css/Navbar.css";
 import { Link } from "react-router-dom"
 import alchemylogo from "../../Assets/Image/Alchemy Logo New-01 (1).png";
 import pdf from "../../Assets/Image/abc.pdf";
 import { Helmet } from "react-helmet";
-import navLinks from "../Css/Navbar.css";
+import axios from "axios";
+import DevelopmentUrl from "../../data/api";
 function Navbar() {
+  const[oem, setOem] = useState([]);
+  const[certificate, setCertificate] = useState([]);
+
+  useEffect(() => {
+    axios.get(DevelopmentUrl + '/oem-offerings')
+      .then(res => {
+        setOem(res.data);
+      
+      })
+      .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
+  }, [])
+
+  useEffect(() => {
+    axios.get(DevelopmentUrl + '/certifications')
+      .then(res => {
+        setCertificate(res.data);
+      
+      })
+      .catch(err => console.error("YO YOU GOT AN ERROR IN AXIOS ", err))
+  }, [])
+
   return (
     <div>
       {/* <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -158,34 +179,50 @@ function Navbar() {
               <a href=""><i class="fa fa-certificate px-1" aria-hidden="true"></i>Certification <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
             
              <ul className='scroll-bar'>
-                <li><a href="">GCP</a></li>
-                <li><a href="">RedHat</a></li>
-                <li><a href="">Cisco</a></li>
-                <li><a href="">AWS</a></li>
-                <li><a href="">IBM</a></li>
-                <li><a href="">SAP</a></li>
-                <li><a href="">Big Data & Analytics</a></li>
-                <li><a href="">DevOps</a></li>
-                <li><a href="">CompTia</a></li>
+                <li><Link to='/certificate/gcp'
+                    state={{ from: certificate[0] }} >GCP</Link></li>
+                <li><Link to='/certificate/redhat'
+                    state={{ from: certificate[1] }} >RedHat</Link></li>
+                <li><Link to='/certificate/cisco'
+                    state={{ from: certificate[2] }} >Cisco</Link></li>
+                <li><Link to='/certificate/aws'
+                    state={{ from: certificate[3] }} >AWS</Link></li>
+                <li><Link to='/certificate/ibm'
+                    state={{ from: certificate[4] }} >IBM</Link></li>
+                <li><Link to='/certificate/sap'
+                    state={{ from: certificate[5] }} >SAP</Link></li>
+                <li><Link to='/certificate/bigdata-analytics'
+                    state={{ from: certificate[6] }} >BigData & Analytics</Link></li>
+                <li><Link to='/certificate/devops'
+                    state={{ from: certificate[7] }} >DevOps</Link></li>
+                <li><Link to='/certificate/comptia'
+                    state={{ from: certificate[8] }} >CompTia</Link></li>
               </ul>
              
             </li>
 
             <li>
               <a href=""><i class="fa fa-th px-1" aria-hidden="true"></i>OEM Offerings <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
-              <ul >
-                <li><a href="">IBM</a></li>
-                <li><a href="">Microsoft</a></li>
-                <li><a href="">RedHat</a></li>
-                <li><a href="">Citrix</a></li>
-                <li><a href="">AWS</a></li>
-                <li>
-                  <a href="">More  <i class='bx bxs-chevron-right arrow more-arrow'></i></a>
-                  <ul>
-                    <li><a href="">Vmware</a></li>
-                    <li><a href="">Informatica</a></li>
-                  </ul>
+              <ul  className='scroll-bar'>
+              <li> <Link to='/oem/ibm'
+                    state={{ from: oem[0] }} >IBM</Link></li>
+                  {/* <li><a href="">IBM</a></li> */}
+                <li><Link to='/oem/microsoft'
+                    state={{ from: oem[1] }} >Microsoft</Link></li>
+                <li><Link to='/oem/redhat'
+                    state={{ from: oem[2] }} >RedHat</Link></li>
+                <li><Link to='/oem/citrix'
+                    state={{ from: oem[3] }} >Citrix</Link>
                 </li>
+                <li><Link to='/oem/aws'
+                    state={{ from: oem[4] }} >AWS</Link></li>
+             
+                 
+                    <li><Link to='/oem/vmware'
+                    state={{ from: oem[5] }}>Vmware</Link></li>
+                    <li><Link to='/oem/informatica'
+                    state={{ from: oem[6] }}>Informatica</Link></li>
+                 
               </ul>
             </li>
 
