@@ -10,12 +10,10 @@ import instructor from "../../Assets/Image/instructor.png";
 import schedule from "../../Assets/Image/timetable.png";
 import lifetime from "../../Assets/Image/lifetime.png";
 import configuration from "../../Assets/Image/configuration.png";
-
-function Course() {
-  const location = useLocation();
-  const { from } = location.state;
-  let css = '';
-  const [fullname, setFullname] = useState('');
+import ibm from "../../Assets/Image/ibm.png"
+import pdf from "../../Assets/pdf/IBM.pdf"
+const Ibmoem = () => {
+    const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [trainingfor1, setTrainingfor1] = useState(false);
@@ -58,13 +56,13 @@ function Course() {
           setErr("");
         }
         break;
-      // case "message":
-      //   if (!value || value.trim() === "") {
-      //     setErr({ message: "Message is required" });
-      //   } else {
-      //     setErr("");
-      //   }
-      //   break;
+      case "message":
+        if (!value || value.trim() === "") {
+          setErr({ message: "Message is required" });
+        } else {
+          setErr("");
+        }
+        break;
       default: {
         return "";
       }
@@ -126,11 +124,11 @@ function Course() {
   const messageHandle = (e) => {
     const value = e.target.value;
     setMessage(value);
-    // const name = e.target.name;
-    // const validateResult = validate(name, value);
-    // if (!validateResult) {
-    //   setMessage(value);
-    // }
+    const name = e.target.name;
+    const validateResult = validate(name, value);
+    if (!validateResult) {
+      setMessage(value);
+    }
   }
   const EnquiryForm = async (e) => {
 
@@ -143,7 +141,10 @@ function Course() {
       setErr({ submit3: "Enter valid Phone Number" });
     } else if (trainingfor1 === false && trainingfor2 === false && trainingfor3 === false) {
       setErr({ submit4: "Choose atleast one training category" });
+    } else if (message.length === 0 || err.message != null) {
+      setErr({ submit5: "Enter valid message" });
     }
+
     else {
       setIsLoading(true);
       const form = {
@@ -156,7 +157,7 @@ function Course() {
           corporate: trainingfor3
         },
         message: message,
-        title: from.title
+        title: "AWS Certification"
       }
 
       await axios.post(DevelopmentUrl + '/sents', form)
@@ -178,100 +179,59 @@ function Course() {
     }
 
   }
-  if (from.hasOwnProperty("bgImage") === true) {
-    css = `
-    .bckgroundcertificate {
-        background-image: url(${DevelopmentUrl}${from.bgImage.url}),
-        height: "500px",
-        opacity: 1,
-    } `;
-  }
-
+  
   return (
-    <>
-      <style scoped>{css}</style>
-      <div class="p-5  bg-image bckgroundcertificate">
+<>
+<div class="p-5  bg-image bckgroundcertificate">
         <div class="mask" >
           <div class="container-fluid">
-            <div class="row p-5 maincourse">
+            <div class="row p-5">
               <div class="col-sm-4 p-5 ">
-                {
-                  from.hasOwnProperty("certImage") === true ? 
-                  <img src={`${DevelopmentUrl}${from.certImage.url}`} className="imgbanner" alt="courseImage" />: ''
-                }
-                
+                <img
+                  src={ibm}
+                  className="imgbanner"
+                  alt="course"
+                />
                 <button type="button" class=" enquirybutton" data-toggle="modal" data-target=".bd-example-modal-lg">Enquire Now</button>
               </div>
-              <div class="col-sm-8 py-5 textparagraph ">
-                <h4 className='cname'>{from.hasOwnProperty("title") === true ? from.title : ""}</h4>
-                <p className='pt-4 cname'>{from.hasOwnProperty("description") === true ? from.description : ""}</p>
+              <div class="col-sm-8 py-5 text-white ">
+                <h4 className='cname'>IBM Authorized Training</h4>
+                <p className='pt-4 cname'>Alchemy Solutions is a training organisation with a broad range of resources, particularly for IBM Products. Our headquarters are in Bangalore, and we have offices in Hyderabad, Chennai, Mumbai, Gurgaon, and Noida. We also provide our clients with top-notch training infrastructure, and our commitment to quality is what places us as India's top training vendor.
+                </p>
                 <hr />
-                <div className='row'>
-                  <div className='col-sm-6 d-flex'>
-                    <img src={instructor} height="30px" />
-                    <p className=' px-3'>36 Hrs Instructor-Led Training </p>
-                  </div>
-                  <div className='col-sm-6 d-flex'>
-                    <img src={schedule} height="30px" />
-                    <p className=' px-3'>Flexible Schedule</p>
-                  </div>
-                </div>
-                <div className='row'>
-                  <div className='col-sm-6 d-flex '>
-                    <img src={lifetime} height="30px" />
-                    <p className=' px-3'>Lifetime access</p>
-                  </div>
-                  <div className='col-sm-6 d-flex'>
-                    <img src={configuration} height="30px" />
-                    <p className='px-3'>Project & Exercises</p>
-                  </div>
-                </div>
+              
+               
               </div>
-
             </div>
           </div>
         </div>
+
       </div>
+      <div className='container my-5 '>
+  <div class="card p-5 ">
+ <div className='row'>
+<div className='col-9'>
+    <h4 >IBM OEM Offerings</h4>
+<h6>The Following pdf contains all the IBM Certification course details offered.</h6>
+</div>
+<div className='col-3'>
+<button type="button"  style={{textTransform: "none",
+background: "#00BEFF 0% 0% no-repeat padding-box",
+borderRadius: "9px",
 
-      {/* <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Overview</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="profile" aria-selected="false">Curriculum</button>
-        </li>
+color: "white",
+fontFamily: "Poppins" ,
+fontSize: "20px",
+padding:"10px ",
 
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#FAQ" type="button" role="tab" aria-controls="contact" aria-selected="false">FAQs</button>
-        </li>
-      </ul> */}
-      <div class="tab-content content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+border: "none"}}><a href={pdf} target="_blank">View Details</a></button>
+</div>
 
-          <div >
-            <ReactMarkdown>
-              {from.hasOwnProperty("overview") === true ? from.overview : ""}
-              {/* {from.overview} */}
-            </ReactMarkdown>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="profile-tab">
-          <ReactMarkdown >
-            {from.hasOwnProperty("curriculum") === true ? from.curriculum : ""}
-            {/* {from.curriculum} */}
+ </div>
+  
+</div>
+  </div>
 
-          </ReactMarkdown>
-        </div>
-
-        <div class="tab-pane fade" id="FAQ" role="tabpanel" aria-labelledby="contact-tab">
-
-          <ReactMarkdown>
-            {from.hasOwnProperty("faqs") === true ? from.faqs : ""}
-            {/* {from.faqs} */}
-
-          </ReactMarkdown>
-        </div>
-      </div>
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -352,7 +312,7 @@ function Course() {
                 <div class="form-group">
                   <label for="message-text" class="col-form-label">Message:</label>
                   <textarea class="form-control" id="message-text" name="message" value={message} style={{ background: "#E7EEF0", border: "1px solid #18566B" }} onChange={messageHandle}></textarea>
-                  {/* {err.message != null ? (
+                  {err.message != null ? (
                     <p style={{ color: "red", fontSize: "11px" }}>{err.message}</p>
                   ) : (
                     ""
@@ -360,7 +320,7 @@ function Course() {
                   {err.submit5 != null ? (
                     <p style={{ color: "red", fontSize: "11px" }}>{err.submit5}</p>
                   ) : ''
-                  } */}
+                  }
                 </div>
               </form>
             </div>
@@ -373,41 +333,8 @@ function Course() {
           </div>
         </div>
       </div>
-
-
-  <div className='container my-5'>
-  <div class="card pb-5 ">
- <div className='row'>
-<div className='col-sm-4 p-5  ' >
-{
-                  from.hasOwnProperty("certImage") === true ? 
-                  <img src={`${DevelopmentUrl}${from.certImage.url}`} className="imgbanner" alt="courseImage" />: ''
-                }
-</div>
-<div className='col-sm-8 '>
-<h4 className='text-center py-3'>{from.title} Certification</h4>
-
-{from.hasOwnProperty("listofcertificate") === true ?
-          from.listofcertificate.map(item => {
-            return (
-              <>
-                {/* <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">{item.certificatename}</div>
-                </li> */}
-               
-                <p className='Training ' >{item.certificatename}<hr/></p>
-              </>
-            )
-
-          }): ''}
-</div>
-
- </div>
-  
-</div>
-  </div>
     </>
   )
 }
 
-export default Course;
+export default Ibmoem

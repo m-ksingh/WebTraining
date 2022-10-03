@@ -18,6 +18,7 @@ import mindtree from "../../Assets/Image/Logo-01.png";
 import tesco from "../../Assets/Image/Logo-02.png";
 import progress from "../../Assets/Image/proress.jpeg"
 import cloudlamission from "../../Assets/Image/cloudlabourmision.gif"
+import infography from "../../Assets/Image/Infographics-01.png"
 function CloudLab() {
   return (
   <>
@@ -35,6 +36,11 @@ function CloudLab() {
     <button type="submit" class="btn">Login</button>
   </form>
    */}
+    {/* <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3 ">Cloud Labs</h1>
+              </div> 
+        </div> */}
         </div>
       </div>
       <div className='text-center pb-5' style={{ background: "#E7EEF0" }} >
@@ -69,6 +75,15 @@ function CloudLab() {
 </div>
 </div>
 
+<div className='text-center  bb' >
+    
+        <h4 class=" pt-1  ">
+          <img class="img-fluid" src ={infography}  alt="Testimonial" />
+        </h4>
+     </div>
+
+
+   
 
 
 <div className=' py-5 ' style={{background: "rgb(231, 238, 240)"}}>

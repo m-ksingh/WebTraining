@@ -129,7 +129,23 @@
 
   font-size: 40px;
 }
+.alchemy{
+  font-family: 'Poppins';
+  letter-spacing: 0px;
+  color: #707070;
 
+  font-size: 30px;
+  font-weight: 500;
+}
+.alchemyoff{
+  background-image: url("https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=996&t=st=1664514922~exp=1664515522~hmac=57cb85be7d218c4ac00b59feb008e8adb325e574d338c6de8726195ae2aca564");
+  background-repeat: no-repeat;
+  min-height: 500px;
+
+/* 
+  background-position: right 0 bottom 0; */
+  background-size: 100%;
+}
 .weareparagraph {
   text-align: center;
   font-family: 'Poppins';

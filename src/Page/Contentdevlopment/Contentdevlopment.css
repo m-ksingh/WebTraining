@@ -1,0 +1,14 @@
+.Contentdevlop {
+    background-image: url("https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?w=1380&t=st=1664435631~exp=1664436231~hmac=cef60af99d2dd2dfcb9a256bed0e817437cce1d3ae8178afc8d80d6b7696bcd8");
+    height: 450px;
+    }
+    .contentback{
+        background-image: url("../../Assets/Image/bg-sand-wave.png");
+        background-repeat: no-repeat;
+        min-height: 300px;
+     
+    /* 
+        background-position: right 0 bottom 0; */
+        background-size: 100%;
+    }
+    

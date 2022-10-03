@@ -204,24 +204,15 @@ function Navbar() {
             <li>
               <a href=""><i class="fa fa-th px-1" aria-hidden="true"></i>OEM Offerings <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
               <ul  className='scroll-bar'>
-              <li> <Link to='/oem/ibm'
-                    state={{ from: oem[0] }} >IBM</Link></li>
-                  {/* <li><a href="">IBM</a></li> */}
-                <li><Link to='/oem/microsoft'
-                    state={{ from: oem[1] }} >Microsoft</Link></li>
-                <li><Link to='/oem/redhat'
-                    state={{ from: oem[2] }} >RedHat</Link></li>
-                <li><Link to='/oem/citrix'
-                    state={{ from: oem[3] }} >Citrix</Link>
-                </li>
-                <li><Link to='/oem/aws'
-                    state={{ from: oem[4] }} >AWS</Link></li>
-             
+              <li> <Link to='/oem/ibm' >IBM</Link></li>
                  
-                    <li><Link to='/oem/vmware'
-                    state={{ from: oem[5] }}>Vmware</Link></li>
-                    <li><Link to='/oem/informatica'
-                    state={{ from: oem[6] }}>Informatica</Link></li>
+                <li><Link to='/oem/microsoft'>Microsoft</Link></li>
+                <li><Link to='oem/redhat' >RedHat</Link></li>
+                <li><Link to='/oem/citrix' >Citrix</Link></li>
+                <li><Link to='/oem/aws'>AWS</Link></li>
+             
+                    <li><Link to='/oem/vmware'>Vmware</Link></li>
+                    <li><Link to='/oem/informatica'>Informatica</Link></li>
                  
               </ul>
             </li>
@@ -229,13 +220,26 @@ function Navbar() {
             <li>
               <a href=""><i class="fa fa-th-large px-1" aria-hidden="true"></i>Services <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
               <ul >
-                <li><a href="">Open houses</a></li>
-                <li><a href="">Content Development</a></li>
-
-                <li><a href="">IT contract staffing</a></li>
-                <li><a href="">Infrastructure </a></li>
+              <li><a href="/content-Development">Content Development</a></li>
+                <li><a href="/open-house">Open houses</a></li>
+             
+{/* 
+                <li><a href="">IT contract staffing</a></li> */}
+                <li><a href="/infra">Infrastructure </a></li>
               </ul>
             </li>
+
+            <li>
+              <a href=""><i class="fa-solid fa-list-check px-1"></i>Events <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
+              <ul >
+              <li><a href="/event-partner">Partner Events</a></li>
+                <li><a href="/event">Events</a></li>
+            
+              </ul>
+            </li>
+
+
+
 
           </ul>
         </nav>

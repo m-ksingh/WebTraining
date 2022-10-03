@@ -1,7 +1,8 @@
 .TrainingBanner {
-    background-image: url("../../Assets/Image/trainingbanner.gif");
-    height: 450px;
-  
+    background-image: url("../../Assets/Image/trainingbanner.jpg");
+    height: 650px;
+    
+    
   
   }
   .btntraining{
@@ -92,11 +93,18 @@
        .bb{
         background-image: url('../../Assets/Image/msss_cleanup.JPG');
        }
+
+       .bc{
+        background-image: url('../../Assets/Image/msss_cleanup.JPG');
+        height: auto;
+        background-repeat: repeat;
+       }
        .trainig-scroll{
         height: 260px;
         overflow-y: scroll;
         
        }
+       
        .trainig-scroll::-webkit-scrollbar {
         width: 6px;
       }
@@ -166,7 +174,50 @@ border-collapse: collapse;
     text-align: center
   }
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
- 
+  .Training {
+    text-align: justify;
+    font-family: 'Poppins';
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .WeareTraining {
+    font-family: 'Poppins';
+    letter-spacing: 0px;
+    color: #707070;
+  
+    font-size: 30px;
+  }
+  .htdmethod{
+display: none;
+  }
+  .htdmethodimg{
+    max-width: 100%;
+  
+  }
+@media screen and (max-width:600px) {
+
+  .Training {
+    text-align: justify;
+    font-family: 'Poppins';
+
+    color: #707070;
+
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .htdmethodimg{
+    display: none;
+  }
+  .htdmethod{
+    display: inline;
+      }
+}
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {

@@ -20,6 +20,7 @@ import suse from "../../Assets/Image/suse.png";
 import techdata from "../../Assets/Image/techdata.png";
 import DevelopmentUrl from "../../data/api";
 import { Link } from "react-router-dom";
+import alchemy from "../../Assets/Image/Alcemyoffers.jpeg"
 
 function Home() {
   const [courseList, setCourseList] = useState([]);
@@ -84,10 +85,21 @@ function Home() {
       <div className='text-center pb-5' style={{ background: "#E7EEF0" }} >
         <h4 class=" weare pt-5 ">Who We Are</h4>
 
-        <p className='weareparagraph pb-3' >At Alchemy Solutions, we are driven to nurture and deliver solutions to people-specific problems. From our humble start in 2001 at our Bangalore headquarters, we’ve scaled the industry as India’s fastest growing HR company. Recruitment is not just about aptitude+attitude anymore, the industry demands more. Adapting to this idea, we’re focused on offering our clientele candidates who are also more reliable and a perfect cultural fit to their organisation.</p>
+        <p className='Training ' >Alchemy Solutions is a globally focused IT company with strong capabilities in
+Training and H.R Consultancy. Alchemy Solutions is based in Bangalore, India,
+and has a dedicated team of professionals with diverse technical skill sets. This
+number is steadily growing to help us achieve our vision and goals.</p>
+      <p className="Training">Alchemy Solutions is your source for reliable and productive consultancy.
+Stringent quality standards, exceptional resource capabilities and a consistent
+record of delivering solutions to clients on schedule, drive the company’s
+focus.</p>
+      
       </div>
-
-
+{/* 
+      <div className=' text-center alchemyoff pb-4'  >
+        <h6 class=" alchemy py-3 ">Alchemy offers world-class training to its customers in the following areas:</h6>
+        <img class="img-fluid" src ={alchemy} alt ="alchemy"/>
+        </div> */}
 
       <div class="aboutus-section ">
         <div class="container">

@@ -1,0 +1,21 @@
+.infra-header {
+    background-image: url("../../../Assets/Image/infrabanner.jpg");
+    min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  
+  }
+
+  .infratext{
+    font-family:" normal normal bold 36px/87px Poppins";
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+font-size: 20px;
+
+  }
