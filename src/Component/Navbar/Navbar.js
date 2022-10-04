@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../Css/Navbar.css";
 import { Link } from "react-router-dom"
 import alchemylogo from "../../Assets/Image/Alchemy Logo New-01 (1).png";
-import pdf from "../../Assets/Image/abc.pdf";
+import pdf from "../../Assets/pdf/Course List.pdf";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import DevelopmentUrl from "../../data/api";
@@ -178,6 +178,7 @@ function Navbar() {
             <li><a href="/cloud-Lab"><i class="fa fa-cloud px-1" aria-hidden="true"></i>Cloud labs</a></li>
 
 
+            <li><a href={pdf} target="_blank"><i class="fa-solid fa-book-open px-1" ></i>Courses</a></li>
             <li>
               <a href=""><i class="fa fa-certificate px-1" aria-hidden="true"></i>Certification <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
             
@@ -231,6 +232,9 @@ function Navbar() {
                 <li><a href="/infra">Infrastructure </a></li>
               </ul>
             </li>
+
+
+
 
             <li>
               <a href=""><i class="fa-solid fa-list-check px-1"></i>Events <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
