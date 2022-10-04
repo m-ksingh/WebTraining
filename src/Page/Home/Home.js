@@ -21,6 +21,22 @@ import techdata from "../../Assets/Image/techdata.png";
 import DevelopmentUrl from "../../data/api";
 import { Link } from "react-router-dom";
 import alchemy from "../../Assets/Image/Alcemyoffers.jpeg"
+import Contactus from '../Contactus';
+
+import awsclient from"../../Assets/Image/awsclient.png"
+import ibmm from"../../Assets/Image/ibmm.png"
+import itil from"../../Assets/Image/itil.png"
+import informaticcccc from"../../Assets/Image/informaticcccc.png"
+import gc from"../../Assets/Image/gc.png"
+import pearson from"../../Assets/Image/pearson.png"
+import rededucation from"../../Assets/Image/rededucation.png"
+import vmvare from"../../Assets/Image/vmvare.png"
+
+import mindtree1 from "../../Assets/Image/Logo-01.png";
+// import tesco from "../../Assets/Image/Logo-02.png";
+import progress from "../../Assets/Image/proress.jpeg"
+import cloudlamission from "../../Assets/Image/cloudlabourmision.gif"
+import infography from "../../Assets/Image/Infographics-01.png"
 
 function Home() {
   const [courseList, setCourseList] = useState([]);
@@ -73,9 +89,6 @@ function Home() {
                 }
               </div>
              
-             
-
-              <h6 class="mb-4 mt-4 text-center">Big Data | Cloud Computing | DevOps | AI/ML</h6>
             </div>
           </div>
         </div>
@@ -261,73 +274,50 @@ focus.</p>
         </div>
       </div>
 
-      <div className='trainingpartne-mobile text-center pt-5 pb-5 mt-4'  style={{ background: "#E7EEF0" }} >
-        <h4 class="my-3  weare ">TRAINING PARTNERS</h4>
-        <div class="container pt-5">
-          <div class="row">
-            <div class="col-sm">
-              <img src={ibm} alt="" width="397" height="258" />
-            </div>
-            <div class="col-sm">
-              <img src={microsoft} alt="" width="397" height="258" />
-            </div>
-            <div class="col-sm">
-              <img src={citrix} alt="" width="397" height="258" />
-            </div>
+      <div className='text-center pb-2 hello' >
+        <h4 class=" pt-2 ">TRAINING PARTNERSHIPS</h4>
 
-          </div>
-          {/* <div class="row">
-            <div class="col-sm">
-              <img src={oracle} alt="" width="397" height="258" />
-            </div>
-            <div class="col-sm">
-              <img src={bmc} alt="" width="397" height="258" />
-            </div>
-            <div class="col-sm">
-              <img src={suse} alt="" width="397" height="258" />
-            </div>
-
-          </div> */}
-          <div class="row">
-            <div class="col-sm">
-              <div class="col-sm">
-                <img src={redhat} alt="" width="397" height="258" />
-              </div>
-            </div>
-            <div class="col-sm">
-              <img src={techdata} alt="" width="397" height="258" />
-            </div>
-            <div class="col-sm">
-
-            </div>
-
-          </div>
+        <div className="Contain">
+        <div class="row no-gutters">
+        
+        <div class=" logos">
+          <table cellpadding="0" cellspacing="0" >
+            <tbody>
+              <tr>
+              <td><img class="lazy" src={awsclient} alt="Wallmart Logo"/></td>
+              <td><img class="lazy" src={ibmm} alt="Deloitte Logo"/></td>
+              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
+              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
+              </tr>
+{/* <tr>
+<td><img class="lazy" src={emc} alt="GE Logo"/></td>
+              <td><img class="lazy" src={abb} alt="Vmware Logo"/></td>
+              <td><img class="lazy" src={anz} alt="Target Logo"/></td>
+              <td><img class="lazy" src={tesco} alt="Mercedes-Benz Logo"/></td>
+</tr> */}
+           
+            <tr>
+            <td><img class="lazy" src={gc} alt="GE Logo"/></td>
+              <td><img class="lazy" src={pearson} alt="Vmware Logo"/></td>
+              <td><img class="lazy" src={rededucation} alt="Target Logo"/></td>
+              <td><img class="lazy" src={vmvare} alt="Mercedes-Benz Logo"/></td>
+              </tr>
+              <tr>
+              <td><img class="lazy" src={mindtree1} alt="Wallmart Logo"/></td>
+              <td><img class="lazy" src={info} alt="Deloitte Logo"/></td>
+              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
+              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
+              
+            </tr>
+          
+          
+          </tbody></table>
+        </div>
+      </div>
         </div>
       </div>
 
-      <div className='contactusmain' >
-        <form className='contactus'>
-          <h1 class="text-white text-center"style={{color:"white"}}>Contact Us</h1>
-          <p className='text-center'style={{color:"white"}}>Please take a moment to get in touch, we will get back to you shortly.</p>
-
-          <div class="column">
-            <label for="the-name" style={{color:"white",fontSize: "15px",
-    fontWeight: "500"}}>Your Name</label>
-            <input type="text" name="name" id="the-name" required />
-
-            <label for="the-email"style={{color:"white"}}>Email Address</label>
-            <input type="email" name="email" id="the-email" required />
-
-            <label for="the-phone"style={{color:"white"}}>Phone Number</label>
-            <input type="text" pattern="[6789][0-9]{9}" title="Please enter valid phone number" name="phone" id="the-phone" required />
-          </div>
-          <div class="column">
-            <label for="the-message"style={{color:"white"}}>Message</label>
-            <textarea name="message" id="the-message" required></textarea>
-            <input type="submit" value="Send Message" />
-          </div>
-        </form>
-      </div>
+      <Contactus/>
     </>
   )
 }

@@ -385,6 +385,25 @@ input[type=submit]:focus {
   outline: none;
 }
 
+
+.contactbutton{
+
+  text-transform: none;
+  width: 200px;
+  height: 40px;
+  /* UI Properties */
+  background: #00BEFF 0% 0% no-repeat padding-box;
+  border-radius: 9px;
+  opacity: 1;
+  color: white;
+  font-family: "Poppins" ;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  margin-left: 80px;
+  border: none;
+     }
+
 @media screen and (min-width:600px) {
 
   /*  make the form 2 columns */

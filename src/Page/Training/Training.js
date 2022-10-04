@@ -4,6 +4,7 @@ import hireTrain from "../../Assets/Image/Website Image-01.webp"
 import htdp1 from "../../Assets/Image/htdddd.png"
 import htd from "../../Assets/Image/htd.png";
 import infograph from "../../Assets/Image/Infographics-02.png";
+import Contactus from '../Contactus';
 
 const Training = () => {
  
@@ -259,6 +260,10 @@ Assurance :
         </h4>
      </div>
       <hr />
+
+      <div >
+        <Contactus/>
+      </div>
     </>
   )
 }

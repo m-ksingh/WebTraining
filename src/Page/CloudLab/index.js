@@ -19,6 +19,7 @@ import tesco from "../../Assets/Image/Logo-02.png";
 import progress from "../../Assets/Image/proress.jpeg"
 import cloudlamission from "../../Assets/Image/cloudlabourmision.gif"
 import infography from "../../Assets/Image/Infographics-01.png"
+import Contactus from '../Contactus'
 function CloudLab() {
   return (
   <>
@@ -36,11 +37,11 @@ function CloudLab() {
     <button type="submit" class="btn">Login</button>
   </form>
    */}
-    {/* <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3 ">Cloud Labs</h1>
+            <a href='#contact'><button className='contactbutton'>  Contact us</button></a>
               </div> 
-        </div> */}
+        </div>
         </div>
       </div>
       <div className='text-center pb-5' style={{ background: "#E7EEF0" }} >
@@ -139,12 +140,12 @@ function CloudLab() {
               <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
               <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
               </tr>
-<tr>
+{/* <tr>
 <td><img class="lazy" src={emc} alt="GE Logo"/></td>
               <td><img class="lazy" src={abb} alt="Vmware Logo"/></td>
               <td><img class="lazy" src={anz} alt="Target Logo"/></td>
               <td><img class="lazy" src={tesco} alt="Mercedes-Benz Logo"/></td>
-</tr>
+</tr> */}
            
             <tr>
             <td><img class="lazy" src={gc} alt="GE Logo"/></td>
@@ -165,6 +166,9 @@ function CloudLab() {
         </div>
       </div>
         </div>
+      </div>
+      <div id="contact">
+        <Contactus/>
       </div>
   </>
   )

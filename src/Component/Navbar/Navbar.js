@@ -151,7 +151,10 @@ function Navbar() {
     </div>
   </nav> */}
       <header>
-        <a href="/" class="logo"><img src={alchemylogo} alt="Alchemy Solutions" height="60" /></a>
+        <a href="/" class="logo">
+          <img src={alchemylogo} alt="Alchemy Solutions" height="80" />
+        
+        </a>
         <input type="checkbox" id="menu-bar" />
         <label for="menu-bar" style={{marginTop:"5px"}}>
           <svg

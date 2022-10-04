@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Contentdevlopment.css"
 import one from "../../Assets/Image/one.png"
+import Contactus from '../Contactus'
 
 const Contentdevlopment = () => {
   return (
@@ -10,6 +11,7 @@ const Contentdevlopment = () => {
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
               <h1 class="mb-3 text-center">Content <br/><span style={{letterSpacing:"1px", fontSize:"55px",fontWeight:"700"}}>Development</span></h1>
+              <a href='#contact'><button className='contactbutton mt-5'>  Contact us</button></a>
               </div> 
         </div>
       </div>
@@ -167,7 +169,9 @@ const Contentdevlopment = () => {
   </div>
 </div>
 </div>
-
+<div id="contact">
+  <Contactus/>
+</div>
     </>
   )
 }

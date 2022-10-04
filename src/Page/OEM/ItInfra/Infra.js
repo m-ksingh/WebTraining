@@ -3,6 +3,7 @@ import "./infra.css"
 import progress from "../../../Assets/Image/infra.jpeg"
 import infra from "../../../Assets/Image/infrainfo.png"
 import infras from "../../../Assets/Image/infrainfommm.png"
+import Contactus from '../../Contactus'
 const Infra = () => {
   return (
     <>
@@ -11,7 +12,9 @@ const Infra = () => {
         <div class="d-flex justify-content-center align-items-center h-100">
             <div  style={{color:"#458DA8"}}>
               <h1 class="mb-3 text-center">IT Infrastructure</h1>
+              <a href='#contact '><button className='contactbutton mt-5'>  Contact us</button></a>
               </div> 
+           
         </div>
         </div>
       </div>
@@ -95,6 +98,9 @@ All latest service packs to be applied.
         <h4 class=" pt-1  ">
           <img class="img-fluid" src ={infra}  alt="Testimonial" width="60%" />
         </h4>
+     </div>
+     <div id='contact'>
+        <Contactus/>
      </div>
     </>
   )

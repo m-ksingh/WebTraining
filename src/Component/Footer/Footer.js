@@ -13,25 +13,15 @@ function Footers() {
           <div class="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
           </div>
-          <div>
-            <a href="#" class="me-4 text-reset">
+          <div >
+            <a href="https://www.facebook.com/profile.php?id=100063712260777" target="_blank" class="me-4 text-reset">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="me-4 text-reset">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
+          
+            <a href="https://www.linkedin.com/company/alchemy-solutions-pvt-ltd/" target="_blank" class="me-4 text-reset">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="#" class="me-4 text-reset">
-              <i class="fab fa-github"></i>
-            </a>
+           
           </div>
         </section>
         <section class="">
@@ -79,6 +69,15 @@ function Footers() {
                   <i class="fas fa-envelope me-3"></i>
                   training@alchemysolutions.net
                 </p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  jaya@alchemysolutions.net
+                </p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  gyanendra@alchemysolutions.net
+                </p>
+               
               </div>
             </div>
           </div>

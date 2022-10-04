@@ -8,6 +8,7 @@ import Page404 from './Component/Page404/Page404';
 import CloudLab from './Page/CloudLab';
 import Contentdevlopment from './Page/Contentdevlopment/Contentdevlopment';
 import Course from './Page/Course/index';
+import SearchCourse from './Page/Course/SearchCources';
 import EventsGallery from './Page/Events';
 import Partnerevent from './Page/Events/Partnerevent';
 import Home from './Page/Home/Home';
@@ -41,7 +42,7 @@ function App() {
       <Routes> 
          <Route  path='/' element ={<Home/>}/>
         {/* <Route  path='/certification' element ={<Certification/>}/> */}
-        <Route  path='/Courses' element ={<Course/>}/>
+        <Route  path='/Courses' element ={<SearchCourse/>}/>
         <Route  path='/oem/:oemtitle' element ={<Oemoffering/>}/>
         <Route  path='/certificate/:certificatetitle' element ={<Course/>}/>
         <Route  path='/hire-Train-Deploy' element ={<Training/>}/>
