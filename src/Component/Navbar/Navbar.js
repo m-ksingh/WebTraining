@@ -174,11 +174,8 @@ function Navbar() {
         </label>
         <nav class="navbar">
           <ul>
-            <li><a href="/hire-Train-Deploy"><i class="fa fa-user px-1" aria-hidden="true"></i>Hire train & Deploy</a></li>
-            <li><a href="/cloud-Lab"><i class="fa fa-cloud px-1" aria-hidden="true"></i>Cloud labs</a></li>
 
-
-            <li><a href={pdf} target="_blank"><i class="fa-solid fa-book-open px-1" ></i>Courses</a></li>
+          <li><a href={pdf} target="_blank"><i class="fa-solid fa-book-open px-1" ></i>Courses</a></li>
             <li>
               <a href=""><i class="fa fa-certificate px-1" aria-hidden="true"></i>Certification <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
             
@@ -222,7 +219,7 @@ function Navbar() {
             </li>
 
             <li>
-              <a href=""><i class="fa fa-th-large px-1" aria-hidden="true"></i>Services <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
+              <a href="#"><i class="fa fa-th-large px-1" aria-hidden="true"></i>Services <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
               <ul >
               <li><a href="/content-Development">Content Development</a></li>
                 <li><a href="/open-house">Open houses</a></li>
@@ -233,6 +230,14 @@ function Navbar() {
               </ul>
             </li>
 
+            <li><a href="/hire-Train-Deploy"><i class="fa fa-user px-1" aria-hidden="true"></i>Hire train & Deploy</a></li>
+            <li><a href="/cloud-Lab"><i class="fa fa-cloud px-1" aria-hidden="true"></i>Cloud labs</a></li>
+          <li><a href="/testimonial"><i class="fa-solid fa-award px-1" aria-hidden="true"></i>Testimonial</a></li>
+     
+
+
+            
+
 
 
 
@@ -240,7 +245,7 @@ function Navbar() {
               <a href=""><i class="fa-solid fa-list-check px-1"></i>Events <i class='bx bxs-chevron-down js-arrow arrow '></i></a>
               <ul >
               <li><a href="/event-partner">Partner Events</a></li>
-                <li><a href="/event">Events</a></li>
+                <li><a href="/event">Social Events</a></li>
             
               </ul>
             </li>

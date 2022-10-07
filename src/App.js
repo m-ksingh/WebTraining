@@ -23,7 +23,7 @@ import Redhat from './Page/OEM/Redhat';
 import Vmware from './Page/OEM/Vmware';
 import OpenHouse from './Page/Opnhouse/OpenHouse';
 import Training from './Page/Training/Training';
-
+import Testimonial from './Page/Testimonial';
 function App() {
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById("spinner");
@@ -59,6 +59,7 @@ function App() {
         <Route path ="/oem/vmware" element ={<Vmware/>}/>
         <Route path ="/oem/informatica" element ={<Informatica/>}/>
         <Route path ="/infra" element ={<Infra/>}/>
+        <Route path ="/testimonial" element ={<Testimonial/>}/>
         <Route path="/*" element ={<Page404/>}/>
       </Routes>
       <Footers/>

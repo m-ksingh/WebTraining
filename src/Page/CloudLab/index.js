@@ -9,13 +9,12 @@ import pearson from"../../Assets/Image/pearson.png"
 import rededucation from"../../Assets/Image/rededucation.png"
 import vmvare from"../../Assets/Image/vmvare.png"
 
+import microsoft from "../../Assets/Image/microsoft.png";
+import citrix from "../../Assets/Image/citrix.png";
+import redhat from "../../Assets/Image/redhat.png";
 
-import emc from "../../Assets/Image/emc (2).png";
-import abb from "../../Assets/Image/Group 349.png";
-import anz from "../../Assets/Image/Group 348.png";
-import info from "../../Assets/Image/Logo-03.png";
-import mindtree from "../../Assets/Image/Logo-01.png";
-import tesco from "../../Assets/Image/Logo-02.png";
+import techdata from "../../Assets/Image/techdata.png";
+
 import progress from "../../Assets/Image/proress.jpeg"
 import cloudlamission from "../../Assets/Image/cloudlabourmision.gif"
 import infography from "../../Assets/Image/Infographics-01.png"
@@ -45,7 +44,7 @@ function CloudLab() {
         </div>
       </div>
       <div className='text-center pb-5' style={{ background: "#E7EEF0" }} >
-        <h4 class=" weare pt-5 ">Who We Are</h4>
+        <h4 class=" weare pt-5 ">Who Are We ?</h4>
 
         <p className='weareparagraph pb-3' >At Alchemy Solutions, we are driven to nurture and deliver solutions to people-specific problems. From our humble start in 2001 at our Bangalore headquarters, we’ve scaled the industry as India’s fastest growing HR company. Recruitment is not just about aptitude+attitude anymore, the industry demands more. Adapting to this idea, we’re focused on offering our clientele candidates who are also more reliable and a perfect cultural fit to their organisation.</p>
       </div>
@@ -125,7 +124,7 @@ function CloudLab() {
 </div>
 
 
-<div className='text-center pb-2 hello' >
+<div className='text-center pb-2 client' >
         <h4 class=" pt-2 ">TRAINING PARTNERSHIPS</h4>
 
         <div className="Contain">
@@ -135,10 +134,10 @@ function CloudLab() {
           <table cellpadding="0" cellspacing="0" >
             <tbody>
               <tr>
-              <td><img class="lazy" src={awsclient} alt="Wallmart Logo"/></td>
-              <td><img class="lazy" src={ibmm} alt="Deloitte Logo"/></td>
-              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
-              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
+              <td><img class="lazy" src={microsoft} alt="Wallmart Logo"/></td>
+              <td><img class="lazy" src={techdata} alt="Deloitte Logo"/></td>
+              <td><img class="lazy" src={citrix} alt="Accenture Logo"/></td>
+              <td><img class="lazy" src={redhat} alt="Infosys Logo"/></td>
               </tr>
 {/* <tr>
 <td><img class="lazy" src={emc} alt="GE Logo"/></td>
@@ -148,18 +147,12 @@ function CloudLab() {
 </tr> */}
            
             <tr>
-            <td><img class="lazy" src={gc} alt="GE Logo"/></td>
-              <td><img class="lazy" src={pearson} alt="Vmware Logo"/></td>
-              <td><img class="lazy" src={rededucation} alt="Target Logo"/></td>
+            <td><img class="lazy" src={awsclient} alt="GE Logo"/></td>
+              <td><img class="lazy" src={ibmm} alt="Vmware Logo"/></td>
+             
               <td><img class="lazy" src={vmvare} alt="Mercedes-Benz Logo"/></td>
               </tr>
-              <tr>
-              <td><img class="lazy" src={mindtree} alt="Wallmart Logo"/></td>
-              <td><img class="lazy" src={info} alt="Deloitte Logo"/></td>
-              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
-              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
-              
-            </tr>
+           
           
           
           </tbody></table>

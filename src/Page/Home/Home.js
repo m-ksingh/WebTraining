@@ -9,34 +9,81 @@ import info from "../../Assets/Image/Logo-03.png";
 import mindtree from "../../Assets/Image/Logo-01.png";
 import tesco from "../../Assets/Image/Logo-02.png";
 
-
-import ibm from "../../Assets/Image/ibm.png";
+import infras from "../../Assets/Image/infrainfommm.png"
+// import ibm from "../../Assets/Image/ibm.png";
 import microsoft from "../../Assets/Image/microsoft.png";
 import citrix from "../../Assets/Image/citrix.png";
 import redhat from "../../Assets/Image/redhat.png";
-import oracle from "../../Assets/Image/oracle.png";
-import bmc from "../../Assets/Image/bmc.png";
-import suse from "../../Assets/Image/suse.png";
+// import oracle from "../../Assets/Image/oracle.png";
+// import bmc from "../../Assets/Image/bmc.png";
+// import suse from "../../Assets/Image/suse.png";
 import techdata from "../../Assets/Image/techdata.png";
 import DevelopmentUrl from "../../data/api";
 import { Link } from "react-router-dom";
-import alchemy from "../../Assets/Image/Alcemyoffers.jpeg"
+
 import Contactus from '../Contactus';
 
 import awsclient from"../../Assets/Image/awsclient.png"
 import ibmm from"../../Assets/Image/ibmm.png"
-import itil from"../../Assets/Image/itil.png"
-import informaticcccc from"../../Assets/Image/informaticcccc.png"
-import gc from"../../Assets/Image/gc.png"
-import pearson from"../../Assets/Image/pearson.png"
-import rededucation from"../../Assets/Image/rededucation.png"
+
 import vmvare from"../../Assets/Image/vmvare.png"
 
-import mindtree1 from "../../Assets/Image/Logo-01.png";
-// import tesco from "../../Assets/Image/Logo-02.png";
-import progress from "../../Assets/Image/proress.jpeg"
-import cloudlamission from "../../Assets/Image/cloudlabourmision.gif"
-import infography from "../../Assets/Image/Infographics-01.png"
+
+//import  clintile
+
+import ct1 from "../../Assets/Clintile/Png-01.png"
+import ct2 from "../../Assets/Clintile/Png-02.png"
+import ct3 from "../../Assets/Clintile/Png-03.png"
+import ct4 from "../../Assets/Clintile/Png-04.png"
+import ct5 from "../../Assets/Clintile/Png-05.png"
+import ct6 from "../../Assets/Clintile/Png-06.png"
+import ct7 from "../../Assets/Clintile/Png-07.png"
+import ct8 from "../../Assets/Clintile/Png-08.png"
+import ct9 from "../../Assets/Clintile/Png-09.png"
+import ct10 from "../../Assets/Clintile/Png-10.png"
+import ct11 from "../../Assets/Clintile/Png-11.png"
+import ct12 from "../../Assets/Clintile/Png-12.png"
+import ct13 from "../../Assets/Clintile/Png-13.png"
+import ct14 from "../../Assets/Clintile/Png-14.png"
+import ct15 from "../../Assets/Clintile/Png-15.png"
+import ct16 from "../../Assets/Clintile/Png-16.png"
+import ct17 from "../../Assets/Clintile/Png-17.png"
+import ct18 from "../../Assets/Clintile/Png-18.png"
+import ct19 from "../../Assets/Clintile/Png-19.png"
+import ct20 from "../../Assets/Clintile/Png-20.png"
+
+import ct21 from "../../Assets/Clintile/Png-21.png"
+import ct22 from "../../Assets/Clintile/Png-22.png"
+import ct23 from "../../Assets/Clintile/Png-23.png"
+import ct24 from "../../Assets/Clintile/Png-24.png"
+import ct25 from "../../Assets/Clintile/Png-25.png"
+import ct26 from "../../Assets/Clintile/Png-26.png"
+import ct27 from "../../Assets/Clintile/Png-27.png"
+import ct28 from "../../Assets/Clintile/Png-28.png"
+import ct29 from "../../Assets/Clintile/Png-29.png"
+import ct30 from "../../Assets/Clintile/Png-30.png"
+import ct31 from "../../Assets/Clintile/Png-31.png"
+import ct32 from "../../Assets/Clintile/Png-32.png"
+import ct33 from "../../Assets/Clintile/Png-33.png"
+import ct34 from "../../Assets/Clintile/Png-34.png"
+import ct35 from "../../Assets/Clintile/Png-35.png"
+import ct36 from "../../Assets/Clintile/Png-36.png"
+import ct37 from "../../Assets/Clintile/Png-37.png"
+import ct38 from "../../Assets/Clintile/Png-38.png"
+import ct39 from "../../Assets/Clintile/Png-39.png"
+import ct40 from "../../Assets/Clintile/Png-40.png"
+import ct41 from "../../Assets/Clintile/Png-41.png"
+import ct42 from "../../Assets/Clintile/Png-42.png"
+import ct43 from "../../Assets/Clintile/Png-43.png"
+import ct44 from "../../Assets/Clintile/Png-44.png"
+
+
+
+
+
+
+
+
 
 function Home() {
   const [courseList, setCourseList] = useState([]);
@@ -95,8 +142,8 @@ function Home() {
       </div>
 
       {/* body */}
-      <div className='text-center pb-5' style={{ background: "#E7EEF0" }} >
-        <h4 class=" weare pt-5 ">Who We Are</h4>
+      <div className='text-center pb-1' style={{ background: "#E7EEF0" }} >
+        <h4 class=" weare pt-5 ">Who Are We ?</h4>
 
         <p className='Training ' >Alchemy Solutions is a globally focused IT company with strong capabilities in
 Training and H.R Consultancy. Alchemy Solutions is based in Bangalore, India,
@@ -108,6 +155,17 @@ record of delivering solutions to clients on schedule, drive the company’s
 focus.</p>
       
       </div>
+      <hr/>
+      <div className='text-center pb-1' style={{ background: "#E7EEF0" }} >
+        <h4 class=" WeareTraining pt-4 ">Alchemy Credentials</h4>
+
+        <p className='infratext'  >&#x2022; An EICC (Electronic Industry Citizenship Coalition) Audited Company</p>
+
+        <p className='infratext' >&#x2022; Crisil Rated Company</p>
+
+        <p className='infratext ' >&#x2022; WeConnect Certification.</p>
+      </div>
+      <hr/>
 {/* 
       <div className=' text-center alchemyoff pb-4'  >
         <h6 class=" alchemy py-3 ">Alchemy offers world-class training to its customers in the following areas:</h6>
@@ -206,7 +264,12 @@ focus.</p>
           </div>
         </div>
       </div>
+      <div className='text-center ' style={{ background: "#E7EEF0" }} >
+    
+        
+    <img class="img-fluid" src ={infras}  alt="Testimonial"   width="60%"/>
 
+</div>
 
       {/* client */}
 
@@ -217,64 +280,136 @@ focus.</p>
       <div class="slider contactusmain">
         <div class="slide-track">
           <div class="slide">
-            <img src={info} height="60" width="280" alt="" />
+            <img src={ct1} height="60" width="280" alt="" />
           </div>
           <div class="slide">
-            <img src={tesco} height="70" width="280" alt="" />
+            <img src={ct2} height="70" width="280" alt="" />
           </div>
           <div class="slide">
-            <img src={emc} height="70" width="250" alt="" />
+            <img src={ct3} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={anz} height="70" width="250" alt="" />
+            <img src={ct4} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={abb} height="70" width="250" alt="" />
+            <img src={ct5} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={mindtree} height="90" width="250" alt="" />
+            <img src={ct6} height="70" width="250" alt="" />
           </div>
-{/* repeatd */}
-<div class="slide">
-            <img src={info} height="60" width="280" alt="" />
+
+          <div class="slide">
+            <img src={ct7} height="60" width="280" alt="" />
           </div>
           <div class="slide">
-            <img src={tesco} height="70" width="280" alt="" />
+            <img src={ct8} height="70" width="280" alt="" />
           </div>
           <div class="slide">
-            <img src={emc} height="70" width="250" alt="" />
+            <img src={ct29} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={anz} height="70" width="250" alt="" />
+            <img src={ct10} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={abb} height="70" width="250" alt="" />
+            <img src={ct11} height="70" width="250" alt="" />
           </div>
           <div class="slide">
-            <img src={mindtree} height="90" width="250" alt="" />
+            <img src={ct12} height="70" width="250" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src={ct13} height="60" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct14} height="70" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct15} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct16} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct17} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct18} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct19} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct20} height="70" width="250" alt="" />
           </div>
 
 
-          {/* <div class="slide">
-            <img src="https://alchemysolutions.net/wp-content/uploads/2019/09/LT.jpg" height="70" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Vodafone.jpg" height="70" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Siemens.jpg" height="100" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Cognizant.jpg" height="100" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="https://alchemysolutions.net/wp-content/uploads/2019/09/Accenture.jpg" height="80" width="250" alt="" />
-          </div> */}
 
+          <div class="slide">
+            <img src={ct21} height="60" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct22} height="70" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct23} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct24} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct25} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct26} height="70" width="250" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src={ct27} height="60" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct28} height="70" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct29} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct30} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct31} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct32} height="70" width="250" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src={ct33} height="60" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct34} height="70" width="280" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct35} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct36} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct37} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct38} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct39} height="70" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src={ct40} height="70" width="250" alt="" />
+          </div>
         </div>
       </div>
 
-      <div className='text-center pb-2 hello' >
+      <div className='text-center pb-2 client' >
         <h4 class=" pt-2 ">TRAINING PARTNERSHIPS</h4>
 
         <div className="Contain">
@@ -284,10 +419,10 @@ focus.</p>
           <table cellpadding="0" cellspacing="0" >
             <tbody>
               <tr>
-              <td><img class="lazy" src={awsclient} alt="Wallmart Logo"/></td>
-              <td><img class="lazy" src={ibmm} alt="Deloitte Logo"/></td>
-              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
-              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
+              <td><img class="lazy" src={microsoft} alt="Wallmart Logo"/></td>
+              <td><img class="lazy" src={techdata} alt="Deloitte Logo"/></td>
+              <td><img class="lazy" src={citrix} alt="Accenture Logo"/></td>
+              <td><img class="lazy" src={redhat} alt="Infosys Logo"/></td>
               </tr>
 {/* <tr>
 <td><img class="lazy" src={emc} alt="GE Logo"/></td>
@@ -297,18 +432,12 @@ focus.</p>
 </tr> */}
            
             <tr>
-            <td><img class="lazy" src={gc} alt="GE Logo"/></td>
-              <td><img class="lazy" src={pearson} alt="Vmware Logo"/></td>
-              <td><img class="lazy" src={rededucation} alt="Target Logo"/></td>
+            <td><img class="lazy" src={awsclient} alt="GE Logo"/></td>
+              <td><img class="lazy" src={ibmm} alt="Vmware Logo"/></td>
+             
               <td><img class="lazy" src={vmvare} alt="Mercedes-Benz Logo"/></td>
               </tr>
-              <tr>
-              <td><img class="lazy" src={mindtree1} alt="Wallmart Logo"/></td>
-              <td><img class="lazy" src={info} alt="Deloitte Logo"/></td>
-              <td><img class="lazy" src={itil} alt="Accenture Logo"/></td>
-              <td><img class="lazy" src={informaticcccc} alt="Infosys Logo"/></td>
-              
-            </tr>
+           
           
           
           </tbody></table>

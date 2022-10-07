@@ -2,7 +2,7 @@ import React from 'react'
 import "./infra.css"
 import progress from "../../../Assets/Image/infra.jpeg"
 import infra from "../../../Assets/Image/infrainfo.png"
-import infras from "../../../Assets/Image/infrainfommm.png"
+
 import Contactus from '../../Contactus'
 const Infra = () => {
   return (
@@ -18,27 +18,13 @@ const Infra = () => {
         </div>
         </div>
       </div>
-      <div className='text-center pb-1' style={{ background: "#E7EEF0" }} >
-        <h4 class=" WeareTraining pt-4 ">Alchemy Credentials</h4>
-
-        <p className='infratext'  >&#x2022; An EICC (Electronic Industry Citizenship Coalition) Audited Company</p>
-
-        <p className='infratext' >&#x2022; Crisil Rated Company</p>
-
-        <p className='infratext ' >&#x2022; WeConnect Certification.</p>
-      </div>
-      <hr/>
+      
       <div className='text-center pb-1' style={{ background: "#E7EEF0" }} >
         <h4 class=" WeareTraining pt-1 ">Facilities Across India</h4>
 
         <p className='Training ' >Alchemy Provides top of the line infrastructure services to its Customers across India with 2500 seating capacity. Alchemy can accommodate 400 participants in Bangalore, 200 in Chennai, 200 in Hyderabad, 100 in Pune. 100 in Mumbai  etc….  Training Rooms are also provided on Long term Lease basis to Companies for their Freshers Recruitment, Training, Delpoying .</p>
         <hr />
-        <div className='text-center ' style={{ background: "#E7EEF0" }} >
-    
-        
-    <img class="img-fluid" src ={infras}  alt="Testimonial"   width="60%"/>
-
-</div>
+      
         <div className='text-center ' >
       
         <h4 class=" pt-3  ">

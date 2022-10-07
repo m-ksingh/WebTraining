@@ -289,7 +289,7 @@ height: auto;
 }
 
 .slider .slide-track {
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
@@ -384,7 +384,16 @@ input[type=submit]:focus {
   background: lightgreen;
   outline: none;
 }
+.client{
+  background-image: url("../../Assets/Image/bg-sand-wave.png");
+  background-repeat: no-repeat;
+  min-height: 420px;
+  padding-top: 60px;
 
+  /* background-position: right 0 bottom 0; */
+  background-size: 100%;
+  
+}
 
 .contactbutton{
 

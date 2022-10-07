@@ -10,8 +10,14 @@
 .address{
     color: #707070 ;
     font-family:'poppins';
-    font-size: 18px;   
+    font-size: 18px;  
+    text-transform: uppercase; 
 }
 .fab{
   color:#458DA8;
+}
+p,a{
+  color: #707070;
+  font-size: 18px;
+  font-family:'poppins';
 }
