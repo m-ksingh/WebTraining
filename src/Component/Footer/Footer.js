@@ -106,10 +106,10 @@ function Footers() {
               <h6 class="text-uppercase fw-bold mb-4">
                   Mailing Address
                 </h6>
-                <p>
+                {/* <p>
                   <i class="fas fa-phone me-3"></i>
                   9901031200 , 9844108533
-                </p>
+                </p> */}
               <p>
                   <i class="fas fa-envelope me-3"></i>
                   training@alchemysolutions.net

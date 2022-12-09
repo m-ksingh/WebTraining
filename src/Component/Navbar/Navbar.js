@@ -6,6 +6,7 @@ import pdf from "../../Assets/pdf/Course List.pdf";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import DevelopmentUrl from "../../data/api";
+import QR from "../../Assets/Image/qrcode.JPG"
 function Navbar() {
   const[oem, setOem] = useState([]);
   const[certificate, setCertificate] = useState([]);
@@ -250,16 +251,32 @@ function Navbar() {
               </ul>
             </li>
 
-
-
-
+            <li>
+            <a href='#'   data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-qrcode px-1"></i>QR </a>
+            {/* <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-qrcode px-1" ></i>QR</button> */}
+           
+            </li>
           </ul>
         </nav>
       </header>
 
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        
+          
+         <div className='container'>
+         <div className='row'>
+          <center><div class="modal-body">
+             <img src ={QR} className='img-fluid' alt='qr' />
+            </div></center>
+          </div>
+         </div>
+           
+         
+        </div>
+      </div>
 
-
-
+   
     </div>
   )
 }
